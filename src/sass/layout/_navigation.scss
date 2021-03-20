@@ -1,0 +1,80 @@
+.sidebar {
+    height: 100vh;
+    width: 35rem;
+    background-color: $color-grey-dark-2;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    padding: 5rem;
+    cursor: pointer;
+
+    &__logo {
+        width: 100%;
+    }
+}
+
+.nav {
+    margin-top: 3rem;
+    margin-bottom: auto;
+    
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        padding: 2rem 0;
+        padding-left: 25%;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $color-primary;
+        }
+
+        &--active {
+            background-color: $color-primary;
+        }
+    }
+
+    &__link,
+    &__link:link,
+    &__link:active {
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        & i {
+            margin-right: 2rem;
+            width: $font-size-default;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.media-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem;
+
+    &__link {
+        color: $color-white;
+        font-size: 5rem;
+        transition: all .2s;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
