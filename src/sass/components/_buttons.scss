@@ -1,0 +1,31 @@
+.btn {
+    border: none;
+    outline: none;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 1.5rem 3rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .2s;
+    box-shadow: 0 .2rem 2rem rgba($color-black, .2);
+
+    &:hover,
+    &:focus {
+        outline: none;
+        background-color: lighten($color-primary , 7);
+        transform: translateY(-.5rem);
+        box-shadow: 0 .4rem 4rem rgba($color-black, .3);
+    }
+
+    &:active {
+        transform: translateY(.5rem);
+        box-shadow: 0 .4rem 1rem rgba($color-black, .3);
+    }
+
+    & a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+}
+
