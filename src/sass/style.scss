@@ -8,8 +8,12 @@
 @import './base/base';
 
 // Components
+@import './components/buttons';
 
 // Layout
 @import './layout/navigation';
 @import './layout/header';
 @import './layout/footer';
+
+// Pages
+@import './pages/landingpage';
