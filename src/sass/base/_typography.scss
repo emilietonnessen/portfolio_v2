@@ -2,3 +2,39 @@ body {
     font-family: $font-family-default;
     font-size: $font-size-default;
 }
+
+.headline {
+    font-family: $font-family-heading;
+    text-transform: uppercase;
+
+    &--primary {
+        font-size: 5rem;
+        display: flex;
+        align-items: center;
+        letter-spacing: 5px;
+        margin-bottom: 3rem;
+
+        & span {
+            display: inline-block;
+            height: 2px;
+            width: 100%;
+            flex: 1;
+            background-color: $color-white;
+            margin-left: 4rem;
+        }
+    }
+
+    &--secondary {
+        color: $color-primary;
+        font-size: 4rem;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+    }
+
+    &--tertiary {
+        font-family: $font-family-default;
+        letter-spacing: 8px;
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+}
