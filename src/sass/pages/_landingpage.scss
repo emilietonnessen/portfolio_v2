@@ -1,0 +1,54 @@
+.landingpage {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero {
+    flex: 0 0 70%;
+    padding: 3rem;
+
+    &__headline {
+        font-size: 7.5rem;
+        text-transform: uppercase;
+    }
+
+    &__job-title {
+        text-transform: uppercase;
+        color: $color-primary;
+        font-size: 3rem;
+        letter-spacing: 8px;
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        font-size: 2.2rem;
+        font-weight: 200;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+}
+
+.profile {
+    position: relative;
+
+    &__img {
+        width: 100%;
+
+        &--emilie {
+            border-radius: 100%;
+            z-index: 10;
+            position: relative;
+            box-shadow: 0 .3rem 2rem rgba($color-black, .3);
+        }
+
+        &--logo {
+            position: absolute;
+            top: -22rem;
+            right: -15rem;
+            width: 40rem;
+            z-index: 1;
+        }
+    }
+}
