@@ -1,7 +1,10 @@
-function App() {
+import Footer from "./components/Layout/Footer"
+
+const App = () => {
     return (
-        <div>
+        <div className="app">
             test
+            <Footer />
         </div>
     );
 }
