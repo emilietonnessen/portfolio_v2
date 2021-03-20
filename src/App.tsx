@@ -4,12 +4,18 @@ import Landingpage from "./containers/Landingpage";
 
 const App = () => {
     return (
-        <div className="app">
+        <>
             <Sidebar />
-            <Landingpage />
+
+            <div className="app">
+                
+                <Landingpage />
+                
+                
+            </div>
             
             <Footer />
-        </div>
+        </>
     );
 }
 
