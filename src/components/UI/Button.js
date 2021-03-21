@@ -1,14 +1,11 @@
-const Button = ({children, link}) => {
+const Button = ({children, link, download}) => {
     return (
-        
         <button className="btn">
-            <a href={link}>
+            <a href={link} download={download} className="btn__link">
                 {children}
             </a>
         </button>
-        
-        
-    )
+    );
 }
 
 export default Button;
