@@ -11,15 +11,18 @@
 }
 
 .brand {
-    padding: 5rem;
     cursor: pointer;
+
+    
+        padding: 5rem;
+    
 
     &__logo {
         width: 100%;
     }
 }
 
-.nav {
+.menu {
     margin-top: 3rem;
     margin-bottom: auto;
     
@@ -29,36 +32,71 @@
     }
 
     &__item {
-        padding: 2rem 0;
-        padding-left: 25%;
-        cursor: pointer;
         transition: all .2s;
+        position: relative;
 
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
 
+        
+/* 
         &:hover,
         &:focus {
             background-color: $color-primary;
-        }
+        } */
 
         &--active {
             background-color: $color-primary;
         }
     }
 
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0%;
+        height: 100%;
+        width: 3px;
+        background-color: $color-primary;
+        transform: scaleY(0);
+        transition: transform .2s,
+            width .4s cubic-bezier(1, 0, 0, 1) .2s,
+            background-color .1s;
+    }
+
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item:active::before {
+        background-color: lighten($color-primary, 10);
+    }
+
     &__link,
     &__link:link,
     &__link:active {
+        display: block;
         color: $color-white;
         text-decoration: none;
         text-transform: uppercase;
+        padding: 2rem 0;
+        padding-left: 25%;
+        cursor: pointer;
+        z-index: 10;
+        position: relative;
 
         & i {
             margin-right: 2rem;
             width: $font-size-default;
             font-size: 1.8rem;
+        }
+
+        &--active {
+            background-color: $color-primary;
         }
     }
 }

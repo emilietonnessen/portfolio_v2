@@ -1,5 +1,5 @@
 import Footer from "./components/Layout/Footer"
-import Sidebar from "./components/Layout/Sidebar";
+import Sidebar from "./components/Layout/nav/Sidebar";
 import About from "./containers/About";
 import Contact from "./containers/Contact";
 import Landingpage from "./containers/Landingpage";
