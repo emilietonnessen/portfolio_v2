@@ -1,14 +1,29 @@
 .btn {
     border: none;
     outline: none;
-    background-color: $color-primary;
-    color: $color-white;
-    padding: 1.5rem 3rem;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    cursor: pointer;
+    background-color: transparent;
+    -webkit-appearance: none;
+    border-radius: none;
     transition: all .2s;
-    box-shadow: 0 .2rem 2rem rgba($color-black, .2);
+
+    &__link,
+    &__link:link,
+    &__link:active {
+        color: $color-white;
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        background-color: $color-primary;
+        cursor: pointer;
+        transition: all .2s;
+        box-shadow: 0 .2rem 2rem rgba($color-black, .2);
+        display: block;
+
+        & i {
+            margin-right: 1rem;
+        }
+    }
 
     &:hover,
     &:focus {
@@ -22,10 +37,4 @@
         transform: translateY(.5rem);
         box-shadow: 0 .4rem 1rem rgba($color-black, .3);
     }
-
-    & a {
-        color: inherit;
-        text-decoration: inherit;
-    }
 }
-
