@@ -6,13 +6,16 @@ const Contact = () => {
         <div className="contact" id="contact">
             <h2 className="headline headline--primary">Contact Me <span></span></h2>
             
-            <Form />
+            <div className="contact__box">
 
-            <div className="illustration">
-                <img src={illustration} alt="Illustration" className="illustration__img"/>
+                <Form />
+                <div className="illustration">
+                    <img src={illustration} alt="Illustration" className="illustration__img"/>
+                </div>
+
             </div>
         </div>
-    )
+    );
 }
 
-export default Contact
+export default Contact;
