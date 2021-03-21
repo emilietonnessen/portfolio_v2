@@ -1,3 +1,79 @@
 .about {
     min-height: 100vh;
+    margin-bottom: 30rem;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    min-height: 65rem;
+
+    & div {
+        flex: 0 0 50%
+    }
+}
+
+.dev-life {
+    &__info {
+        display: flex;
+    }
+}
+
+.info {
+    display: flex;
+
+    & > *:not(:last-child) {
+        margin-right: 10rem;
+    }
+}
+
+.education {
+    margin-bottom: 4rem;
+
+    &__course-name {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: .5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__desc {
+        font-weight: 200;
+    }
+}
+
+.technical {
+    margin: 5rem 0;
+    display: flex;
+
+    & > * {
+        flex: 0 0 50%;
+    }
+}
+
+.certificates {
+    margin: 5rem 0;
+}
+
+
+
+.frontend__content,
+.backend__content {
+    display: flex;
+    padding-right: 3rem;
+    
+
+    & > * {
+        flex: 0 0 33%;
+
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
 }
