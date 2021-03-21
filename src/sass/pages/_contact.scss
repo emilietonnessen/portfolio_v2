@@ -1,3 +1,17 @@
 .contact {
     min-height: 100vh;
+
+    &__box {
+        display: flex;
+        margin-top: 10rem;
+        align-items: center;
+    }
+}
+
+.illustration {
+    flex: 0 0 40%;
+
+    &__img {
+        width: 100%;
+    }
 }
