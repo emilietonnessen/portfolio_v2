@@ -1,0 +1,17 @@
+.course {
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        min-height: 4rem;
+        font-weight: 300;
+    }
+
+    &__certificate {
+        background-color: $color-grey-dark-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30rem;
+    }
+}
