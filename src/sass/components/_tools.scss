@@ -1,0 +1,21 @@
+.tools {
+    border-top: 1px solid $color-white;
+    border-bottom: 1px solid $color-white;
+    padding: 5rem 3rem;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+        flex: 0 0 33%;
+    }
+
+    &__icon {
+        margin-right: 1rem;
+        color: lighten($color-primary, 10);
+    }
+}
