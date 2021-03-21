@@ -41,6 +41,12 @@
             z-index: 10;
             position: relative;
             box-shadow: 0 .3rem 2rem rgba($color-black, .3);
+            transition: ease-in-out .3s;
+
+            &:hover {
+                transform: rotate(10deg);
+                animation: rotate 1s;
+            }
         }
 
         &--logo {
@@ -52,3 +58,4 @@
         }
     }
 }
+
