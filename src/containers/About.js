@@ -1,4 +1,4 @@
-import emilie2 from '../assets/emilie-2.jpg';
+import emilie2 from './../assets/emilie-2.jpg';
 import emilie3 from '../assets/emilie-3.jpg';
 import emilie4 from '../assets/emilie-4.jpg';
 import Button from '../components/UI/Button';
