@@ -1,22 +1,9 @@
-import Button from "../UI/Button"
-
-
-const Project = ({image, title, id}) => {
+const Project = ({image, title, github}) => {
     return (
-        <div className={`project project--${id}`}>
-            <img src={image} alt="test" className="project__img"/>
-
-            <div className="project__content">
-                <h5 className="project__title">
-                    {title}
-                </h5>
-                <div className="project__buttons">
-                    <Button link="https://github.com/Emizzari/risor-klatreklubb">Github</Button>
-                    <Button link="https://www.tonnessen.com/projects/risor-klatreklubb/">Live Demo</Button>
-                </div>
-                
-            </div>
-        </div>
+        <a href={github} className="project" target="_blank" rel="noopener noreferrer" >
+            <img src={image} alt="test" className="project__image"/>
+            <h4 className="project__title">{title}</h4>
+        </a>
     );
 }
 
