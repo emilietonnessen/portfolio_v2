@@ -8,10 +8,11 @@ import Portfolio from "./containers/Portfolio";
 const App = () => {
     return (
         <>
-            <Sidebar />
+            
 
             <div className="app">
-                
+                <Sidebar />
+
                 <Landingpage />
 
                 <Portfolio />
