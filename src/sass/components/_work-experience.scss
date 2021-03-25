@@ -1,0 +1,40 @@
+.work-experience {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    column-gap: 3rem;
+    row-gap: .5rem;
+
+    &:not(:last-child) {
+        margin-bottom: 5rem;
+    }
+
+    &__period {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    &__workplace {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    &__description {
+        grid-column: 2 / 2;
+        grid-row: 2 / 3;
+
+        font-weight: 200;
+        color: rgba(#fff, .7)
+    }
+
+    &__city {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    &__period,
+    &__workplace,
+    &__city {
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+}

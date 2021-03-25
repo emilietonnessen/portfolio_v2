@@ -1,4 +1,7 @@
 .about {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    
     min-height: 100vh;
     margin-bottom: 30rem;
 }
@@ -8,23 +11,33 @@
     flex-direction: row;
     min-height: 65rem;
 
+    @media only screen and (max-width: $bp-tab-port) {
+        flex-direction: column;
+    }
+
     & div {
         flex: 0 0 50%
     }
 }
 
-.dev-life {
-    &__info {
+.development {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(40rem, 1fr));
+    column-gap: 5rem;
+    row-gap: 8rem;
+
+    @media only screen and (max-width: $bp-tab-port) {
         display: flex;
+        flex-direction: column;
+    }
+
+    &__headline {
+        grid-column: 1 / -1;
     }
 }
 
-.info {
-    display: flex;
-
-    & > *:not(:last-child) {
-        margin-right: 10rem;
-    }
+.educations {
+    grid-column: 1 / 2;
 }
 
 .education {
@@ -43,14 +56,22 @@
     }
 }
 
-.technical {
-    margin: 5rem 0;
-    display: flex;
+.work-experiences {
+    grid-column: 2 / 3;
 
-    & > * {
-        flex: 0 0 50%;
-    }
+    background-color: $color-grey-dark-2;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
 }
+
+.tools,
+.courses {
+    grid-column: 1 / -1;
+}
+
+
 
 .certificates {
     margin: 5rem 0;
@@ -72,8 +93,3 @@
     }
 }
 
-.courses {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 3rem;
-}

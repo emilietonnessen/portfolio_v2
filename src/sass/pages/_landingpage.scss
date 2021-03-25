@@ -1,17 +1,40 @@
 .landingpage {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
     min-height: 100vh;
+
     display: flex;
     align-items: center;
     position: relative;
+
+    @media only screen and (max-width: $bp-lap) {
+        min-height: 85vh;
+        margin-top: 15vh;
+    }
+
+    @media only screen and (max-width: $bp-tab-port) {
+        display: grid;
+        grid-template-columns: 1fr 30%;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 5vh;
+    }
 }
 
 .hero {
     flex: 0 0 70%;
     padding: 3rem;
+    z-index: 10;
+
+    @media only screen and (max-width: $bp-tab-port) {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
 
     &__headline {
         font-size: 7.5rem;
         text-transform: uppercase;
+        line-height: 1.2;
     }
 
     &__job-title {
@@ -32,6 +55,13 @@
 
 .profile {
     position: relative;
+
+    @media only screen and (max-width: $bp-tab-port) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+        transform: translateY(15rem) translateX(-5rem);
+    }
 
     &__img {
         width: 100%;
@@ -55,6 +85,21 @@
             right: -15rem;
             width: 40rem;
             z-index: 1;
+
+            @media only screen and (max-width: $bp-lap) {
+                right: -5rem;
+            }
+
+            @media only screen and (max-width: $bp-tab-land) {
+                width: 30rem;
+                top: -18rem;
+                right: -1rem;
+            }
+
+            @media only screen and (max-width: $bp-tab-port) {
+                top: -15rem;
+                right: -8rem;
+            }
         }
     }
 }

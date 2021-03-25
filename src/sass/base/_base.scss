@@ -5,9 +5,40 @@ body {
 
 html {
     font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-tab-land) {
+        font-size: 56.25%;
+    }
 }
 
 .app {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp-largest) {
+        max-width: unset;
+        margin: 0;
+
+        display: grid;
+        grid-template-columns: 35rem calc(90vw - 35rem - 5rem); 
+        grid-template-rows: repeat(4, minmax(100vh, max-content));
+        column-gap: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-lap-lg) {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    & > *:not(:first-child) {
+        @media only screen and (max-width: $bp-lap-lg) {
+            padding: 10rem;
+        }
+
+        @media only screen and (max-width: $bp-tab-land) {
+            padding: 5rem;
+        }
+    }
+
 }

@@ -1,11 +1,7 @@
 .portfolio {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
     min-height: 100vh;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 3rem;
-    margin: 5rem 10rem 5rem 0;
-}

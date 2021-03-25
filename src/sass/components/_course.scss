@@ -1,17 +1,62 @@
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    column-gap: clamp(2rem, 2vw, 5rem);
+    row-gap: 8rem;
+
+    &__headline {
+        grid-column: 1 / -1;
+    }
+}
+
 .course {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: inherit;
+    text-decoration: inherit;
+    transition: all .2s;
+    cursor: pointer;
+
     &__title {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 1.6rem;
-        min-height: 4rem;
-        font-weight: 300;
+        font-size: 1.8rem;
+        font-weight: 400;
+        font-family: $font-family-heading;
     }
 
     &__certificate {
+        display: block;
+        width: 100%;
+        transition: all .2s;
+    }
+
+    &__progress {
         background-color: $color-grey-dark-1;
+        min-height: 25rem;
+        height: 100%;
+        text-transform: capitalize;
+        transition: all .2s;
+        cursor: pointer;
+        box-shadow: $box-shadow-default;
+
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 30rem;
+    }
+
+    &__certificate:hover,
+    &__certificate:focus,
+    &__progress:focus,
+    &__progress:hover {
+        transform: scale(1.05) translateY(-1rem);
+        box-shadow: $box-shadow-hover;
+        cursor: pointer;
+    }
+
+    &__certificate:active,
+    &__progress:active {
+        transform: scale(.95) translateY(1rem);
+        box-shadow: $box-shadow-active;
+        cursor: pointer;
     }
 }

@@ -1,11 +1,19 @@
 .gallery {
     position: relative;
 
+    @media only screen and (max-width: $bp-tab-port) {
+        min-height: 70rem;
+    }
+
     &__img {
         width: 50%;
         position: absolute;
         transition: all .3s;
         box-shadow: 0 .5rem 1.5rem rgba($color-black, .2);
+
+        @media only screen and (max-width: $bp-tab-port) {
+            width: 30%;
+        }
 
         &:hover,
         &:focus {
@@ -18,18 +26,38 @@
             top: 30rem;
             left: 15rem;
             z-index: 30;
+
+            @media only screen and (max-width: $bp-lap-lg) {
+                top: 25rem;
+            }
+
+            @media only screen and (max-width: $bp-tab-port) {
+                left: 25rem;
+            }
         }
 
         &--2 {
             top: 0;
             right: -5rem;
             z-index: 10;
+
+            @media only screen and (max-width: $bp-tab-land) {
+                right: -2rem;
+            }
+
+            @media only screen and (max-width: $bp-tab-port) {
+                right: 20rem;
+            }
         }
 
         &--3 {
             top: 4rem;
             left: 8rem;
             z-index: 20;
+
+            @media only screen and (max-width: $bp-tab-port) {
+                left: 17rem;
+            }
         }
     }
 }
