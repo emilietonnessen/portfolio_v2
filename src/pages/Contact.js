@@ -1,5 +1,6 @@
 import illustration from '../assets/mail.svg'
 import Form from '../components/Form'
+import Feedback from '../components/UI/Feedback'
 
 const Contact = () => {
     return (
@@ -14,6 +15,9 @@ const Contact = () => {
                 </div>
 
             </div>
+
+            <Feedback type="warning"
+                message="Email currently not working. Email at emilie@tonnessen.com" />
         </div>
     );
 }
