@@ -1,0 +1,20 @@
+.success {
+    background-color: rgba($color-success, .3);
+    border: 2px solid $color-success;
+    padding: 3rem;
+    margin-top: 3rem;
+}
+
+.warning {
+    background-color: rgba($color-warning, .3);
+    border: 2px solid $color-warning;
+    padding: 3rem;
+    margin-top: 3rem;
+}
+
+.error {
+    background-color: rgba($color-error, .3);
+    border: 2px solid $color-error;
+    padding: 3rem;
+    margin-top: 3rem;
+}
