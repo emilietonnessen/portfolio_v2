@@ -2,8 +2,6 @@ import projects from '../../server/projects';
 import Project from './Project';
 
 const Projects = () => {
-    console.log(projects);
-
     return (
         <div className="projects">
             {projects.map(project => (

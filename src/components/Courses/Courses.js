@@ -2,7 +2,7 @@ import Course from './Course';
 import coursesArray from '../../server/courses';
 
 const Courses = () => {
-    console.log(coursesArray)
+    //console.log(coursesArray)
 
     return (
         <section className="courses">
