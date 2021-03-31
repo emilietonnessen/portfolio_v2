@@ -1,29 +1,20 @@
 import Footer from "./components/Layout/Footer"
 import Sidebar from "./components/Layout/nav/Sidebar";
-import About from "./containers/About";
-import Contact from "./containers/Contact";
-import Landingpage from "./containers/Landingpage";
-import Portfolio from "./containers/Portfolio";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Landingpage from "./pages/Landingpage";
+import Portfolio from "./pages/Portfolio";
 
-const App = () => {
+const App: React.FC = () => {
     return (
         <>
-            
-
             <div className="app">
                 <Sidebar />
-
                 <Landingpage />
-
                 <Portfolio />
-
                 <About />
-
                 <Contact />
-                
-                
             </div>
-
             <Footer />
         </>
     );
