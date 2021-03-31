@@ -34,6 +34,11 @@
         grid-template-rows: 10vh;
         align-items: center;
     }
+
+    @media only screen and (max-width: $bp-tab-port-small) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .brand {
@@ -60,11 +65,25 @@
 .menu {
     margin-top: 3rem;
     margin-bottom: auto;
+    transition: all .3s;
     
     @media only screen and (max-width: $bp-lap) {
         margin: 0;
         height: 10vh;
-        
+    }
+
+    @media only screen and (max-width: $bp-tab-port-small) {
+        position: absolute;
+        top: 0;
+        right: -100vw;
+        height: 100vh;
+        background-color: $color-grey-dark-2;
+        z-index: 200;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__list {
@@ -76,6 +95,14 @@
             align-items: center;
             height: 100%;
             gap: 3rem;
+        }
+
+        @media only screen and (max-width: $bp-tab-port-small) {
+            flex-direction: column;
+            height: unset;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
     }
 
@@ -93,6 +120,12 @@
             margin-bottom: 0 !important;
             height: 100%;
             line-height: 10vh;
+        }
+
+        @media only screen and (max-width: $bp-tab-port-small) {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
         }
 
         &--active {
@@ -144,6 +177,12 @@
             line-height: 10vh;
         }
 
+        @media only screen and (max-width: $bp-tab-port-small) {
+            font-size: 2.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+
         & i {
             margin-right: 2rem;
             width: $font-size-default;
@@ -151,6 +190,11 @@
 
             @media only screen and (max-width: $bp-lap) {
                 align-self: center;
+            }
+
+            @media only screen and (max-width: $bp-tab-port-small) {
+                font-size: 2.5rem;
+                margin-right: 4rem;
             }
         }
 
@@ -160,6 +204,10 @@
     }
 }
 
+.menu-open {
+    right: 0;
+}
+
 .media-links {
     display: flex;
     justify-content: space-around;
@@ -167,6 +215,10 @@
 
     @media only screen and (max-width: $bp-lap) {
         gap: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-tab-port-small) {
+        display: none;
     }
 
     &__link {
@@ -180,4 +232,43 @@
             color: $color-primary;
         }
     }
+}
+
+.nav-icon {
+    display: none;
+    height: 100%;
+    align-items: center;
+    padding: 0 3rem;
+    cursor: pointer;
+    z-index: 1000;
+    
+    @media only screen and (max-width: $bp-tab-port-small) {
+        display: flex;
+    }
+
+    &__button {
+        border: none;
+        border-radius: 0%;
+        outline: none;
+        background-color: #fff;
+        height: 2px;
+        width: 4.5rem;
+        cursor: pointer;
+        
+        &::before,
+        &::after {
+            content: "";
+            background-color: #fff;
+            height: 2px;
+            width: 4.5rem;
+            display: block;
+            transition: all .3s;
+        }
+
+        &::before{transform: translateY(-1.3rem);}
+        &::after{transform: translateY(1.3rem);}
+    }
+
+    &:hover  &__button::before{transform: translateY(-1.7rem);}
+    &:hover  &__button::after{transform: translateY(1.7rem);}
 }

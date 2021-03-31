@@ -25,8 +25,10 @@ $box-shadow-hover: 0 1rem 3rem rgba(#000, .3);
 $box-shadow-active: 0 1rem 1rem rgba(#000, .3);
 
 // Breakpoints
-$bp-largest: 125em;      // 2000px
-$bp-lap-lg: 100em;       // 1600px
-$bp-lap: 90.625em;       // 1450px
-$bp-tab-land: 71.875em;  // 1150px
-$bp-tab-port: 62.5em;  // 1000px
+$bp-largest: 125em;           // 2000px
+$bp-desktop: 125em;           // 2000px
+$bp-lap-lg: 100em;            // 1600px
+$bp-lap: 90.625em;            // 1450px
+$bp-tab-land: 71.875em;       // 1150px
+$bp-tab-port: 62.5em;         // 1000px
+$bp-tab-port-small: 50em;     //  800px

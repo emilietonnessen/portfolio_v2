@@ -1,6 +1,7 @@
 body {
     background-color: $color-background;
     color: $color-white;
+    overflow-x: hidden;
 }
 
 html {
@@ -14,7 +15,6 @@ html {
 .app {
     max-width: 1300px;
     margin: 0 auto;
-    overflow: hidden;
 
     @media only screen and (max-width: $bp-largest) {
         max-width: unset;
@@ -41,4 +41,27 @@ html {
         }
     }
 
+}
+
+// Scrollbar
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $color-grey-dark-1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:  $color-grey-light-1;
+    border-radius: 5px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:  $color-grey-light-2;
 }
