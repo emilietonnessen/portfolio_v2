@@ -13,7 +13,7 @@ const courses = [
         'name': 'React - The Complete Guide',
         'link': 'https://www.udemy.com/course/react-the-complete-guide-incl-redux/',
         'certificate': null,
-        'progress': '50%'
+        'progress': '55%'
     },
     {
         'id': 3,
@@ -21,7 +21,7 @@ const courses = [
         'name': 'React and TypeScript',
         'link': 'https://www.udemy.com/course/react-and-typescript-build-a-portfolio-project/',
         'certificate': null,
-        'progress': '10%'
+        'progress': '15%'
     },
     {
         'id': 4,
