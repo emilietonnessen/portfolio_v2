@@ -6,6 +6,9 @@ const Contact = () => {
     return (
         <div className="contact" id="contact">
             <h2 className="headline headline--primary">Contact Me <span></span></h2>
+
+            <Feedback type="warning"
+                message="Email currently not working. Email at emilie@tonnessen.com" />
             
             <div className="contact__box">
 
@@ -16,8 +19,7 @@ const Contact = () => {
 
             </div>
 
-            <Feedback type="warning"
-                message="Email currently not working. Email at emilie@tonnessen.com" />
+            
         </div>
     );
 }
