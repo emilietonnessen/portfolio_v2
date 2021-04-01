@@ -4,5 +4,10 @@
 
     min-height: 100vh;
     margin: 20rem 0;
+
+    @media only screen and (max-width: $bp-lap) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
 }
 

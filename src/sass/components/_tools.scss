@@ -7,6 +7,11 @@
         list-style: none;
         display: flex;
         flex-wrap: wrap;
+
+        @media only screen and (max-width: $bp-mobile-lg) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
     }
 
     &__item {

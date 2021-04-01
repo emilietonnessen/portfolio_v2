@@ -8,33 +8,59 @@
     align-items: center;
     position: relative;
 
+
     @media only screen and (max-width: $bp-lap) {
-        min-height: 85vh;
-        margin-top: 15vh;
+        min-height: unset;
+
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
     }
 
-    @media only screen and (max-width: $bp-tab-port) {
+    @media only screen and (max-width: $bp-mobile-lg) {
         display: grid;
-        grid-template-columns: 1fr 30%;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 35%;
+        grid-template-rows: 0 1fr;
         margin-top: 5vh;
-    }
+    } 
+
+    @media only screen and (max-width: $bp-mobile-lg) {
+        //grid-template-columns: 1fr;
+        padding: 0 !important;
+        box-sizing: border-box;
+    } 
 }
 
 .hero {
     flex: 0 0 70%;
-    padding: 3rem;
+    padding-right: 3rem;
     z-index: 10;
 
+    @media only screen and (max-width: $bp-desktop) {
+        flex: 0 0 75%;
+    }
+
     @media only screen and (max-width: $bp-tab-port) {
+        flex: 0 0 70%;
+    }
+
+    @media only screen and (max-width: $bp-mobile-lg) {
         grid-column: 1 / -1;
         grid-row: 2 / 3;
-    }
+        padding-right: 0;
+    } 
 
     &__headline {
         font-size: 7.5rem;
         text-transform: uppercase;
         line-height: 1.2;
+        
+        @media only screen and (max-width: $bp-lap-lg) {
+            font-size: clamp(5rem, 4vw, 7.5rem);
+        }
+
+        @media only screen and (max-width: $bp-mobile-lg) {
+            font-size: clamp(3rem, 8vw, 6rem);
+        }
     }
 
     &__job-title {
@@ -43,6 +69,20 @@
         font-size: 3rem;
         letter-spacing: 8px;
         margin-bottom: 3rem;
+
+        @media only screen and (max-width: $bp-lap-lg) {
+            margin-bottom: 2rem;
+            letter-spacing: 5px;
+        }
+
+        @media only screen and (max-width: $bp-tab-port) {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+
+        @media only screen and (max-width: $bp-mobile-lg) {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+        }
     }
 
     &__text {
@@ -50,18 +90,29 @@
         font-weight: 200;
         line-height: 1.6;
         margin-bottom: 2rem;
+
+        @media only screen and (max-width: $bp-lap-lg) {
+            font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-tab-port) {
+            font-size: 1.8rem;
+            //letter-spacing: 3px;
+        }
     }
 }
 
 .profile {
     position: relative;
 
-    @media only screen and (max-width: $bp-tab-port) {
-        grid-column: 2 / 3;
+    @media only screen and (max-width: $bp-mobile-lg) {
+        position: absolute;
+        
+        grid-column: 1 / 2;
         grid-row: 1 / 2;
-
-        transform: translateY(15rem) translateX(-5rem);
-    }
+        width: 22rem;
+        transform: translateY(12rem) translateX(0rem);
+    } 
 
     &__img {
         width: 100%;
@@ -72,6 +123,10 @@
             position: relative;
             box-shadow: 0 .3rem 2rem rgba($color-black, .3);
             transition: ease-in-out .3s;
+
+            @media only screen and (max-width: $bp-mobile-lg) {
+                //display: none;
+            }
 
             &:hover {
                 transform: rotate(10deg);
@@ -86,19 +141,29 @@
             width: 40rem;
             z-index: 1;
 
+            @media only screen and (max-width: $bp-desktop) {
+                width: 30rem;
+                top: -15rem;
+                right: -10rem;
+            }
+
             @media only screen and (max-width: $bp-lap) {
                 right: -5rem;
             }
 
             @media only screen and (max-width: $bp-tab-land) {
-                width: 30rem;
-                top: -18rem;
-                right: -1rem;
+                width: 25rem;
+                top: -15rem;
+                right: -3rem;
             }
 
             @media only screen and (max-width: $bp-tab-port) {
                 top: -15rem;
-                right: -8rem;
+                right: -3rem;
+            }
+
+            @media only screen and (max-width: $bp-mobile-lg) {
+                display: none;
             }
         }
     }

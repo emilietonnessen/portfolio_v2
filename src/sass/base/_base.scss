@@ -10,13 +10,17 @@ html {
     @media only screen and (max-width: $bp-tab-land) {
         font-size: 56.25%;
     }
+
+    @media only screen and (max-width: $bp-mobile-lg) {
+        font-size: 50%;
+    }
 }
 
 .app {
     max-width: 1300px;
     margin: 0 auto;
 
-    @media only screen and (max-width: $bp-largest) {
+    @media only screen and (max-width: $bp-desktop) {
         max-width: unset;
         margin: 0;
 
@@ -27,17 +31,39 @@ html {
     }
 
     @media only screen and (max-width: $bp-lap-lg) {
-        display: flex;
-        flex-direction: column; 
+        grid-template-columns: 25rem calc(100vw - 25rem - 8rem - 15rem);
+        column-gap: 8rem;
+    }
+    
+    @media only screen and (max-width: $bp-lap) {
+        display: grid;
+        grid-template-columns: 90vw;
+        padding: 0 2.5vw;
+        grid-template-rows: 10rem calc(100vh - 10rem) repeat(3, minmax(100vh, max-content));
+        gap: 0;
+    }
+
+    @media only screen and (max-width: $bp-mobile-lg) {
+        grid-template-columns: 90vw;
+        padding: 0 5vw;
+        //column-gap: 8rem;
     }
 
     & > *:not(:first-child) {
-        @media only screen and (max-width: $bp-lap-lg) {
-            padding: 10rem;
+        @media only screen and (max-width: $bp-lap) {
+            max-width: 1400px;
         }
 
         @media only screen and (max-width: $bp-tab-land) {
-            padding: 5rem;
+            //padding: 0 5rem;
+        }
+
+        @media only screen and (max-width: $bp-tab-port) {
+            //padding: 0 3rem;
+        }
+
+        @media only screen and (max-width: $bp-mobile-lg) {
+            padding: 0;
         }
     }
 

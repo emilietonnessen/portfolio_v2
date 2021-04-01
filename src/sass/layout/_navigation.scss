@@ -19,9 +19,9 @@
 
     @media only screen and (max-width: $bp-lap) {
         flex-direction: row;
-        grid-column: 1 / -1;
+        //grid-column: 1 / -1;
         grid-row: 1 / 2;
-        height: 10vh;
+        height: 10rem;
         width: 100%;
 
         position: fixed;
@@ -69,7 +69,7 @@
     
     @media only screen and (max-width: $bp-lap) {
         margin: 0;
-        height: 10vh;
+        height: 10rem;
     }
 
     @media only screen and (max-width: $bp-tab-port-small) {
@@ -119,7 +119,7 @@
         @media only screen and (max-width: $bp-lap) {
             margin-bottom: 0 !important;
             height: 100%;
-            line-height: 10vh;
+            line-height: 10rem;
         }
 
         @media only screen and (max-width: $bp-tab-port-small) {
@@ -174,7 +174,7 @@
         @media only screen and (max-width: $bp-lap) {
             display: flex;
             padding: 0 3rem;
-            line-height: 10vh;
+            line-height: 10rem;
         }
 
         @media only screen and (max-width: $bp-tab-port-small) {

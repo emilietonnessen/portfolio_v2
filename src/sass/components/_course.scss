@@ -4,6 +4,10 @@
     column-gap: clamp(2rem, 2vw, 5rem);
     row-gap: 8rem;
 
+    @media only screen and (max-width: $bp-mobile-lg) {
+        row-gap: 3rem;
+    }
+
     &__headline {
         grid-column: 1 / -1;
     }
@@ -32,7 +36,7 @@
 
     &__progress {
         background-color: $color-grey-dark-1;
-        min-height: 25rem;
+        min-height: 30rem;
         height: 100%;
         text-transform: capitalize;
         transition: all .2s;
@@ -42,6 +46,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media only screen and (max-width: $bp-desktop) {
+            min-height: 22.5rem;
+        }
     }
 
     &__certificate:hover,

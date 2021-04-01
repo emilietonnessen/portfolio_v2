@@ -4,8 +4,17 @@
     column-gap: 3rem;
     row-gap: .5rem;
 
+    @media only screen and (max-width: $bp-mobile-lg) {
+        column-gap: 2rem;
+        row-gap: .5rem;
+    }
+
     &:not(:last-child) {
         margin-bottom: 5rem;
+
+        @media only screen and (max-width: $bp-mobile-lg) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__period {
@@ -19,7 +28,7 @@
     }
 
     &__description {
-        grid-column: 2 / 2;
+        grid-column: 2 / 4;
         grid-row: 2 / 3;
 
         font-weight: 200;
@@ -36,5 +45,9 @@
     &__city {
         font-weight: 500;
         font-size: 1.8rem;
+
+        @media only screen and (max-width: $bp-mobile-lg) {
+            font-size: 1.6rem;
+        }
     }
 }

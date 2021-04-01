@@ -17,7 +17,7 @@
         background-color: $color-primary;
         cursor: pointer;
         transition: all .2s;
-        box-shadow: 0 .2rem 2rem rgba($color-black, .2);
+        box-shadow: $box-shadow-default;
         display: block;
 
         & i {
@@ -30,11 +30,11 @@
         outline: none;
         background-color: lighten($color-primary , 7);
         transform: translateY(-.5rem);
-        box-shadow: 0 .4rem 4rem rgba($color-black, .3);
+        box-shadow: $box-shadow-hover;
     }
 
     &:active {
         transform: translateY(.5rem);
-        box-shadow: 0 .4rem 1rem rgba($color-black, .3);
+        box-shadow: $box-shadow-active;
     }
 }

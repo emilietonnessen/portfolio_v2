@@ -4,6 +4,11 @@
     
     min-height: 100vh;
     margin-bottom: 30rem;
+
+    @media only screen and (max-width: $bp-lap) {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+    }
 }
 
 .about-me {
@@ -43,12 +48,20 @@
 .education {
     margin-bottom: 4rem;
 
+    @media only screen and (max-width: $bp-mobile-lg) {
+        margin-bottom: 3rem;
+    }
+
     &__course-name {
         font-size: 2rem;
         font-weight: 400;
         margin-bottom: .5rem;
         display: flex;
         justify-content: space-between;
+
+        @media only screen and (max-width: $bp-mobile-lg) {
+            font-size: 1.8rem;
+        }
     }
 
     &__desc {
