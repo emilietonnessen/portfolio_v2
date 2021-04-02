@@ -21,17 +21,18 @@
         flex-direction: row;
         //grid-column: 1 / -1;
         grid-row: 1 / 2;
-        height: 10rem;
+        height: unset;
         width: 100%;
 
         position: fixed;
         z-index: 100;
         top:0;
         right: 0;
+        box-shadow: $box-shadow-default;
 
         display: grid;
         grid-template-columns: max-content 1fr max-content;
-        grid-template-rows: 10vh;
+        grid-template-rows: 10rem;
         align-items: center;
     }
 
@@ -44,11 +45,11 @@
 .brand {
     cursor: pointer;
     padding: 5rem;
-    
+    box-sizing: border-box;
 
     @media only screen and (max-width: $bp-lap) {
-        padding: 1.5vh;
-        height: 10vh;
+        padding: 10%;
+        height: 100%;
     }
 
     &__logo {
@@ -56,8 +57,9 @@
         display: block;
 
         @media only screen and (max-width: $bp-lap) {
-            height: 7vh;
+            height: 100%;
             width: unset;
+           
         }
     }
 }
@@ -214,7 +216,8 @@
     padding: 4rem;
 
     @media only screen and (max-width: $bp-lap) {
-        gap: 3rem;
+        gap: 2rem;
+        padding: 0 15%;
     }
 
     @media only screen and (max-width: $bp-tab-port-small) {
@@ -226,10 +229,14 @@
         font-size: 5rem;
         transition: all .2s;
 
-        
-
         &:hover {
             color: $color-primary;
+        }
+
+        & i {
+            @media only screen and (max-width: $bp-lap) {
+                font-size: 4rem;
+            }
         }
     }
 }
