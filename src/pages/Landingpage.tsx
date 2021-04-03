@@ -5,9 +5,9 @@ import { useEffect } from 'react';
 
 const Landingpage: React.FC = () => {
     // Notify the user that there might be errors
-    useEffect(() => {
+    /* useEffect(() => {
         alert('This website is under construction and might not work properly')
-    }, [])
+    }, []) */
 
     return (
         <section id="landingpage" className="landingpage">
