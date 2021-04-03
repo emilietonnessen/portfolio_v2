@@ -40,6 +40,10 @@
         display: flex;
         justify-content: space-between;
     }
+
+    @media only screen and (max-width: $bp-mobile-lg) {
+        height: 10rem;
+    }
 }
 
 .brand {
@@ -50,6 +54,10 @@
     @media only screen and (max-width: $bp-lap) {
         padding: 10%;
         height: 100%;
+    }
+
+    @media only screen and (max-width: $bp-mobile-lg) {
+        padding: 1.5rem;
     }
 
     &__logo {
