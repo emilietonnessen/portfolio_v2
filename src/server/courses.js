@@ -21,7 +21,7 @@ const courses = [
         'name': 'React and TypeScript',
         'link': 'https://www.udemy.com/course/react-and-typescript-build-a-portfolio-project/',
         'certificate': null,
-        'progress': '15%'
+        'progress': '20%'
     },
     {
         'id': 4,
