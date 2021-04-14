@@ -4,6 +4,13 @@ const WorkExperiences = () => {
             <h4 className="headline headline--tertiary">Work experience</h4>
 
             <div className="work-experience">
+                <h5 className="work-experience__period">2021 - xxxx</h5>
+                <h5 className="work-experience__workplace">Hurtigruten Pluss AS</h5>
+                <p className="work-experience__description">Frontend Developer</p>
+                <h5 className="work-experience__city">Oslo</h5>
+            </div>
+
+            <div className="work-experience">
                 <h5 className="work-experience__period">2017 - 2018</h5>
                 <h5 className="work-experience__workplace">Adecco</h5>
                 <p className="work-experience__description">Barnehage Vikar</p>
