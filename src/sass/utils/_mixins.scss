@@ -1,0 +1,44 @@
+// Center Element
+@mixin centerElement {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+
+
+// Breakpoints
+@mixin respond($breakpoint) {
+    @if $breakpoint == mobile-sm {
+        @media only screen and (max-width: $bp-mobile-sm) { @content; }
+    }
+
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: $bp-mobile) { @content; }
+    }
+
+    @if $breakpoint == mobile-lg {
+        @media only screen and (max-width: $bp-mobile-lg) { @content; }
+    }
+
+    @if $breakpoint == tablet-port {
+        @media only screen and (max-width: $bp-tablet-port) { @content; }
+    }
+
+    @if $breakpoint == tablet-land {
+        @media only screen and (max-width: $bp-tablet-land) { @content; }
+    }
+
+    @if $breakpoint == laptop {
+        @media only screen and (max-width: $bp-laptop) { @content; }
+    }
+
+    @if $breakpoint == laptop-lg {
+        @media only screen and (max-width: $bp-laptop-lg) { @content; }
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: $bp-desktop) { @content; }
+    }
+}

@@ -1,0 +1,35 @@
+.contact-info {
+
+    &__box {
+        border-bottom: 1px solid $color-secondary;
+        padding: 4rem 0;
+
+        &:first-child {
+            border-top: 1px solid $color-secondary;
+        }
+    }
+
+    &__link,
+    &__link:link,
+    &__link:visited {
+        color: $color-white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        column-gap: 5rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__icon {
+        width: 4rem;
+        height: 4rem;
+        margin: 0;
+
+        & path {
+            fill: lighten($color-primary, 5);
+        }
+    }
+}

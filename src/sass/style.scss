@@ -1,12 +1,14 @@
-// Abstracts
-@import './abstracts/variables';
-@import './abstracts/mixins';
-@import './abstracts/animations';
+// Utils
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/animations';
+@import './utils/utilities';
 
 // Base
 @import './base/reset';
 @import './base/typography';
 @import './base/base';
+@import './base/scrollbar';
 
 // Components
 @import './components/buttons';
@@ -15,16 +17,18 @@
 @import './components/tools';
 @import './components/progress-indicator';
 @import './components/course';
-@import './components/contact-form';
+@import './components/contact-info';
 @import './components/project';
 @import './components/work-experience';
 @import './components/modal';
 @import './components/error';
+@import './components/hero';
 
 // Layout
 @import './layout/navigation';
 @import './layout/header';
 @import './layout/footer';
+@import './layout/grid';
 
 // Pages
 @import './pages/landingpage';

@@ -1,30 +1,25 @@
 .contact {
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: max-content;
+        column-gap: 15rem;
 
-    min-height: 100vh;
-
-    @media only screen and (max-width: $bp-lap) {
-        grid-column: 1 / -1;
-        grid-row: 5 / 6;
-    }
-
-    &__box {
-        display: flex;
         margin-top: 10rem;
         align-items: center;
 
-        @media only screen and (max-width: $bp-mobile-lg) {
+        @include respond(mobile-lg) {
             margin-top: 5rem;
-            flex-direction: column;
+            grid-template-columns: 1fr;
+            grid-template-rows: max-content max-content;
         }
     }
-}
 
-.illustration {
-    flex: 0 0 40%;
-
-    &__img {
+    &__illustration {
         width: 100%;
+
+        @include respond(mobile-lg) {
+            padding-top: 6rem;
+        }
     }
 }

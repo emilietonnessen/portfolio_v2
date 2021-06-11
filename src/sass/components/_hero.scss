@@ -1,0 +1,189 @@
+.hero {
+    // Container ----------------------------------------------
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    column-gap: 5rem;
+
+    z-index: 10;
+
+    @include respond(tablet-land) {
+        grid-template-columns: 1fr;
+    }
+
+
+
+
+
+    // Text Content --------------------------------------------
+    &__copywrite {
+        align-self: center;
+
+        @include respond(tablet-land) {
+            grid-row: 2 / 3;
+        }
+    }
+
+
+    &__headline {
+        font-size: 7.5rem;
+        text-transform: uppercase;
+        line-height: 1.2;
+
+        @include respond(desktop) {
+            font-size: clamp(5rem, 4vw, 7.5rem);
+        }
+
+        @include respond(mobile-lg) {
+            font-size: clamp(3rem, 8vw, 6rem);
+        }
+    }
+
+    &__job-title {
+        text-transform: uppercase;
+        color: $color-primary;
+        font-size: 3rem;
+        letter-spacing: 8px;
+        margin-bottom: 3rem;
+
+        @include respond(laptop-lg) {
+            margin-bottom: 2rem;
+            letter-spacing: 5px;
+        }
+
+        @include respond(laptop) {
+            font-size: 2.8rem;
+        }
+
+        @include respond(tablet-port) {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+
+        @include respond(mobile-lg) {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+        }
+    }
+
+
+
+    &__text {
+        font-size: 2.2rem;
+        font-weight: 200;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+
+        @include respond(laptop-lg) {
+            font-size: 2rem;
+        }
+
+        @include respond(tablet-port) {
+            font-size: 1.8rem;
+            //letter-spacing: 3px;
+        }
+    }
+
+
+
+
+
+
+
+    // Graphic Content ----------------------------------------
+    &__graphics {
+        position: relative;
+
+        @include respond(tablet-land) {
+            grid-row: 1 / 2;
+            justify-self: end;
+        }
+
+        @include respond(mobile-lg) {
+            position: absolute;
+            
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            width: 22rem;
+            transform: translateY(12rem) translateX(0rem);
+        } 
+    }
+
+
+    &__profile-image {
+        width: 100%;
+        max-width: 40rem;
+        max-height: 40rem;
+
+        border-radius: 100%;
+        z-index: 10;
+        position: relative;
+        box-shadow: 0 .3rem 2rem rgba($color-black, .3);
+        transition: ease-in-out .3s;
+
+        @include respond(desktop) {
+            max-width: 32rem;
+        }
+
+        @include respond(laptop) {
+            max-width: 30rem;
+        }
+
+        @include respond(tablet-land) {
+            position: absolute;
+            bottom: -3rem;
+            right: 0;
+            width: 25rem;
+            height: 25rem;
+        }
+
+        @include respond(mobile-lg) {
+            bottom: 15rem;
+            right: 0;
+        }
+
+        &:hover {
+            transform: rotate(10deg);
+            animation: rotate 1s;
+        }
+    }
+
+
+    &__logo {
+        position: absolute;
+        top: -18rem;
+        right: 33rem;
+        width: 35rem;
+        z-index: 1;
+
+        @include respond(desktop) {
+            width: 30rem;
+            top: -18rem;
+            right: 24rem;
+        }
+
+        @include respond(laptop) {
+            width: 30rem;
+            top: -18rem;
+            right: 28rem;
+        }
+
+        @include respond(tablet-land) {
+            width: 25rem;
+            top: -25rem;
+            right: 25rem;
+        }
+
+        @include respond(mobile-lg) {
+            top: -35rem;
+            right: 26rem;
+        }  
+
+        @include respond(mobile-sm) {
+            display: none;
+        }
+    }
+}

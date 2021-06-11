@@ -4,7 +4,12 @@
     column-gap: 3rem;
     row-gap: .5rem;
 
-    @media only screen and (max-width: $bp-mobile-lg) {
+    @include respond(tablet-port){
+        column-gap: 2rem;
+        row-gap: .5rem;
+    }
+
+    @include respond(mobile-lg){
         column-gap: 2rem;
         row-gap: .5rem;
     }
@@ -12,7 +17,8 @@
     &:not(:last-child) {
         margin-bottom: 5rem;
 
-        @media only screen and (max-width: $bp-mobile-lg) {
+
+        @include respond(mobile-lg){
             margin-bottom: 3rem;
         }
     }
@@ -46,7 +52,7 @@
         font-weight: 500;
         font-size: 1.8rem;
 
-        @media only screen and (max-width: $bp-mobile-lg) {
+        @include respond(mobile-lg){
             font-size: 1.6rem;
         }
     }

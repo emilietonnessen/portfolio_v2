@@ -1,40 +1,128 @@
 .btn {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    -webkit-appearance: none;
-    border-radius: none;
-    transition: all .2s;
 
-    &__link,
-    &__link:link,
-    &__link:active {
-        color: $color-white;
+    &,
+    &:link,
+    &:visited {
+        // Resets
+        border: 1px solid transparent;
+        outline: none;
+        background-color: transparent;
+        -webkit-appearance: none;
+        border-radius: 0;
         text-decoration: none;
-        padding: 1.5rem 3rem;
-        font-size: 1.7rem;
-        text-transform: uppercase;
-        background-color: $color-primary;
-        cursor: pointer;
-        transition: all .2s;
-        box-shadow: $box-shadow-default;
-        display: block;
 
-        & i {
-            margin-right: 1rem;
-        }
+        // Flexbox
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        
+        // Common Button Styles
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+        box-shadow: $box-shadow-default;
+        transition: all .2s;
     }
+    
 
     &:hover,
     &:focus {
-        outline: none;
         background-color: lighten($color-primary , 7);
         transform: translateY(-.5rem);
         box-shadow: $box-shadow-hover;
     }
 
+    &:focus-visible {
+        border: 1px solid $color-white;
+    }
+
     &:active {
         transform: translateY(.5rem);
         box-shadow: $box-shadow-active;
+    }
+
+
+    // SVG Icon
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+
+        @include respond (mobile) {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+
+
+    // Themes -----------------------------------------------------
+    &--primary,
+    &--primary:link,
+    &--primary:visited {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &:hover {
+            background-color: lighten($color-primary, 10);
+        }
+
+        &:active {
+            background-color: darken($color-primary, 10);
+        }
+    }
+
+
+    &--github,
+    &--github:link,
+    &--github:visited {
+        background-color: $color-github;
+        color: $color-white;
+
+        &:hover {
+            background-color: lighten($color-github, 10);
+        }
+
+        &:active {
+            background-color: darken($color-github, 10);
+        }
+    }
+
+
+
+
+
+    // Sizes ------------------------------------------------------
+    &--cta,
+    &--cta:link,
+    &--cta:visited {
+        padding: 1.5rem 3rem;
+        font-size: 1.8rem;
+    }
+
+    &--lg,
+    &--lg:link,
+    &--lg:visited {
+        padding: 1.2rem 2rem;
+        font-size: 2.5rem;
+    }
+
+    &--md,
+    &--md:link,
+    &--md:visited{
+        padding: 1.2rem 2rem;
+        font-size: 1.8rem;
+
+        @include respond (mobile) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &--sm,
+    &--sm:link,
+    &--sm:visited {
+        padding: .7rem 1.2rem;
+        font-size: 1.4rem;
     }
 }

@@ -1,0 +1,48 @@
+// Color 
+$color-primary-light: lighten(#0073C2, 10);
+$color-primary: #0073C2;
+$color-primary-dark: darken(#0073C2, 15);
+$color-secondary: #191a20;
+
+$color-background: #393C45;
+
+$color-grey-dark-1: #262931;
+$color-grey-dark-2: #212430;
+
+$color-grey-light-1: #868997;
+$color-grey-light-2: #7C86AB;
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$color-success: rgb(56, 211, 9);
+$color-warning: rgb(211, 130, 9);
+$color-error: rgb(211, 23, 9);
+
+$color-github: #6e5494;
+$color-linked: #0e76a8;
+
+
+// Font
+$font-size-default: 1.6rem;
+
+$font-family-default: 'montserrat', sans-serif;
+$font-family-heading: 'fieldwork hum', sans-serif;
+
+// Box Shadow
+$box-shadow-default: 0 .5rem 1.5rem rgba(#000, .15);
+$box-shadow-hover: 0 .5rem 3rem rgba(#000, .2);
+$box-shadow-active: 0 .5rem .5rem rgba(#000, .2);
+
+// Breakpoints
+$bp-desktop: 120em;            // 1920px
+
+$bp-laptop-lg: 100em;          // 1600px
+$bp-laptop: 90.625em;          // 1450px
+
+$bp-tablet-land: 71.875em;     // 1150px
+$bp-tablet-port: 62.5em;       // 1000px
+
+$bp-mobile-lg: 50em;           //  800px
+$bp-mobile: 37.5em;            //  600px
+$bp-mobile-sm: 25em;           //  400px

@@ -14,7 +14,9 @@
         flex: 0 0 50%;
         transition: all .3s;
 
-        @media only screen and (max-width: $bp-mobile-lg) {
+
+
+        @include respond(mobile-lg) {
             flex: 0 0 100%;
         }
 

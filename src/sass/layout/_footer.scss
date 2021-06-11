@@ -2,7 +2,7 @@
     background-color: $color-grey-dark-2;
     display: block;
 
-    @media only screen and (max-width: $bp-mobile-lg) {
+    @include respond(mobile-lg) {
         margin-top: 5rem;
     }
     
