@@ -1,5 +1,5 @@
-# Portfolio 2 - Industry Knowledge v2
-The update of "Industry Knowledge Course Assignment" are a part of a larger assignment in the "Portfolio 2" course.
+# Portfolio v2
+This is my personal portfolio made to showcase my projects and skills.
 
 ## Instructions
 Download the Zip file and run 
