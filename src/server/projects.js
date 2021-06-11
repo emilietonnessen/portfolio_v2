@@ -169,7 +169,7 @@ const projects = [
         'github': 'https://github.com/emilietonnessen/Holidaze',
         'school': {
             'course': 'Project Exam 2',
-            'grade': '..waiting for grading',
+            'grade': 'A',
             'brief': 'The goal for this assignment was to take all the skills learned over the past two years and take on an extensive project where the finished product should reflect my general development capabilities, in addition to visual and technical  skills.'
         },
         'functionalities' : [
