@@ -1,73 +1,41 @@
 // Container/Navigation Bar ---------------------------------------
 .navigation {
-  grid-column: 1 / 2;
-  grid-row: 1 / -1;
-
-  height: 100vh;
-  width: 35rem;
-  background-color: $color-grey-dark-2;
+  height: 5rem;
+  width: 100%;
+  background-color: $color-dark-secondary;
   position: fixed;
   top: 0;
   left: 0;
   box-sizing: border-box;
-
+  z-index: 1000;
   display: flex;
-  flex-direction: column;
-
-  @include respond(laptop-lg) {
-    width: 30rem;
-  }
-
-  @include respond(laptop) {
-    flex-direction: row;
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    height: unset;
-    width: 100%;
-
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    right: 0;
-    box-shadow: $box-shadow-default;
-
-    display: grid;
-    grid-template-columns: max-content 1fr max-content;
-    grid-template-rows: 8rem;
-    align-items: center;
-  }
-
-  @include respond(mobile-lg) {
-    height: unset;
-    background-color: transparent;
-    box-shadow: none;
-  }
+  justify-content: space-between;
+  align-items: center;
 }
 
 // Brand -------------------------------------------------------
 .brand {
   cursor: pointer;
-  padding: 5rem;
+  // padding: 5rem;
   box-sizing: border-box;
+  z-index: 2000;
+  max-height: 100%;
 
-  @include respond(laptop) {
+  /*  @include respond(laptop) {
     padding: 10%;
     height: 100%;
-  }
-
-  @include respond(mobile-lg) {
-    padding: 1.5rem;
-    display: none;
-  }
+  } */
 
   &__logo {
     width: 100%;
     display: block;
+    height: 5rem;
+    padding: 0.8rem;
 
-    @include respond(laptop) {
+    /* @include respond(laptop) {
       height: 100%;
       width: unset;
-    }
+    } */
   }
 }
 
@@ -250,7 +218,7 @@
     display: none;
   }
 
-  &__background {
+  /*  &__background {
     display: none;
 
     @include respond(mobile-lg) {
@@ -265,54 +233,49 @@
       z-index: 1000;
       transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     }
-  }
+  } */
 
   &__button {
-    display: none;
+    display: block;
+    height: 5rem;
+    width: 5.7rem;
+    border-radius: 50%;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
 
-    @include respond(mobile-lg) {
-      display: block;
-      background-color: $color-white;
-      height: 50px;
-      width: 50px;
-      border-radius: 50%;
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 2000;
-      box-shadow: 0 1rem 3rem rgba($color-black, 0.15);
-      text-align: center;
-      cursor: pointer;
+    @include responsive(tablet) {
+      display: none;
     }
   }
 
   &__icon {
-    position: relative;
-    margin-top: 25px;
+    position: absolute;
+    height: 2px;
+    background-color: $color-white;
+    display: inline-block;
+    transition: all 0.2s;
+    right: 16px;
 
-    &,
-    &::before,
-    &::after {
-      width: 3.5rem;
-      height: 1px;
-      background-color: $color-black;
-      display: inline-block;
+    &--1 {
+      top: 17px;
+      width: 2.4rem;
     }
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      transition: all 0.2s;
+    &--2 {
+      top: 22.67px;
+      width: 1.7rem;
     }
 
-    &::before {
-      top: -9px;
+    &--3 {
+      top: 28.33px;
+      width: 2.5rem;
     }
 
-    &::after {
-      top: 9px;
+    &--4 {
+      top: 34px;
+      width: 2rem;
     }
   }
 

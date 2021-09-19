@@ -15,9 +15,12 @@ const HamburgerIcon: React.FC<NavigationHamburgerIconProps> = ({
         onChange={onChange}
       />
       <label htmlFor="navi-toggle" className="menu__button" onClick={onClick}>
-        <span className="menu__icon">&nbsp;</span>
+        <span className="menu__icon menu__icon--1">&nbsp;</span>
+        <span className="menu__icon menu__icon--2">&nbsp;</span>
+        <span className="menu__icon menu__icon--3">&nbsp;</span>
+        <span className="menu__icon menu__icon--4">&nbsp;</span>
       </label>
-      <div className="menu__background">&nbsp;</div>
+      {/* <div className="menu__background">&nbsp;</div> */}
     </>
   );
 };

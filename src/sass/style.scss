@@ -24,10 +24,12 @@
 @import './components/error';
 @import './components/hero';
 @import './components/frontend';
+@import './components/theme-toggle';
 
 // Layout
 @import './layout/navigation';
 @import './layout/header';
+@import './layout/main';
 @import './layout/footer';
 @import './layout/grid';
 

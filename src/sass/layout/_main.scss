@@ -1,0 +1,26 @@
+
+// Main -----------------------------------------------
+.main {
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1.5rem minmax(10rem, 142.5rem) 1.5rem;
+  grid-template-rows: repeat(4, minmax(100vh, max-content));
+  margin-bottom: 20rem;
+
+  /* display: grid;
+  grid-template-columns: 7rem minmax(10rem, 142.5rem) 7rem;
+  grid-template-rows: repeat(4, minmax(100vh, max-content));
+  margin-bottom: 20rem;
+
+  @include respond(tablet-port) {
+    grid-template-columns: 3rem minmax(10rem, 142.5rem) 3rem;
+  }
+
+  @include respond(mobile) {
+    grid-template-columns: 1.5rem minmax(10rem, 142.5rem) 1.5rem;
+  }
+
+  & > * {
+    padding: 20rem 0;
+  } */
+}

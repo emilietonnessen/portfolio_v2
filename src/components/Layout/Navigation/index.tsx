@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import Brand from 'components/Layout/Navigation/Brand';
 import HamburgerIcon from 'components/Layout/Navigation/HamburgerIcon';
 import Menu from 'components/Layout/Navigation/Menu';
 import SocialMedia from 'components/Layout/Navigation/SocialMedia';
+import ThemeToggler from './ThemeToggle';
+import Brand from 'components/Layout/Navigation/Brand';
 
 const Navigation: React.FC = () => {
   const [checked, setChecked] = useState<boolean>(false);
@@ -19,6 +20,7 @@ const Navigation: React.FC = () => {
   return (
     <nav className="navigation">
       <ThemeToggler />
+
       <Brand />
 
       <HamburgerIcon
