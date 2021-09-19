@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import App from './App';
-import { ProjectsProvider } from './context/ProjectsContext';
-import './sass/style.scss'; 
+import './sass/style.scss';
+import store from './store/store';
 
 ReactDOM.render(
-    <React.StrictMode>
-        <ProjectsProvider>
-            <App />
-        </ProjectsProvider>
-    </React.StrictMode>,
-    document.getElementById('root')
-); 
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);

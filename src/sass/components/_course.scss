@@ -1,78 +1,76 @@
-
 .course {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    color: inherit;
-    text-decoration: inherit;
-    transition: all .2s;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: inherit;
+  text-decoration: inherit;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: clamp(2rem, 2vw, 5rem);
+    row-gap: 8rem;
+
+    @include respond(tablet-port) {
+      row-gap: 3rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    @include respond(mobile-lg) {
+      row-gap: 3rem;
+    }
+
+    @include respond(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: $font-family-heading;
+  }
+
+  &__certificate {
+    display: block;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  &__progress {
+    background-color: $color-grey-dark-1;
+    height: 100%;
+    text-transform: capitalize;
+    transition: all 0.2s;
     cursor: pointer;
+    box-shadow: $box-shadow-default;
 
-    &__container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        column-gap: clamp(2rem, 2vw, 5rem);
-        row-gap: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        @include respond(tablet-port) {
-            row-gap: 3rem;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-        }
-
-        @include respond(mobile-lg) {
-            row-gap: 3rem;
-        }
-
-        @include respond(mobile) {
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(6, 1fr);
-        }
+    @include respond(desktop) {
+      row-gap: 3rem;
     }
+  }
 
-    &__title {
-        font-size: 1.8rem;
-        font-weight: 400;
-        font-family: $font-family-heading;
-    }
+  &__certificate:hover,
+  &__certificate:focus,
+  &__progress:focus,
+  &__progress:hover {
+    transform: scale(1.05) translateY(-1rem);
+    box-shadow: $box-shadow-hover;
+    cursor: pointer;
+  }
 
-    &__certificate {
-        display: block;
-        width: 100%;
-        transition: all .2s;
-    }
-
-    &__progress {
-        background-color: $color-grey-dark-1;
-        height: 100%;
-        text-transform: capitalize;
-        transition: all .2s;
-        cursor: pointer;
-        box-shadow: $box-shadow-default;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @include respond(desktop) {
-            row-gap: 3rem;
-        }
-    }
-
-    &__certificate:hover,
-    &__certificate:focus,
-    &__progress:focus,
-    &__progress:hover {
-        transform: scale(1.05) translateY(-1rem);
-        box-shadow: $box-shadow-hover;
-        cursor: pointer;
-    }
-
-    &__certificate:active,
-    &__progress:active {
-        transform: scale(.95) translateY(1rem);
-        box-shadow: $box-shadow-active;
-        cursor: pointer;
-    }
+  &__certificate:active,
+  &__progress:active {
+    transform: scale(0.95) translateY(1rem);
+    box-shadow: $box-shadow-active;
+    cursor: pointer;
+  }
 }

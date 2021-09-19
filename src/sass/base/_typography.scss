@@ -1,67 +1,79 @@
 body {
-    font-family: $font-family-default;
-    font-size: $font-size-default;
-    line-height: 1.6;
-    font-weight: 300;
+  font-family: $font-family-default;
+  font-size: $font-size-default;
+  line-height: 1.6;
+  font-weight: 300;
 }
 
 .paragraph {
-    &:not(:last-child) {
-        margin-bottom: 3rem;
-    }
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &--highlight {
+    font-weight: 500;
+    color: lighten($color-primary-light, 15);
+  }
 }
 
 .headline {
-    font-family: $font-family-heading;
-    text-transform: uppercase;
-    line-height: 1;
+  font-family: $font-family-heading;
+  text-transform: uppercase;
+  line-height: 1;
 
-    &--primary {
-        font-size: 5rem;
-        display: flex;
-        align-items: center;
-        letter-spacing: 5px;
-        margin-bottom: 3rem;
+  &--primary {
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 5px;
+    margin-bottom: 3rem;
 
-        @include respond(mobile-lg) {
-            font-size: 4rem;
-            letter-spacing: 2px;
-        }
-
-        & span {
-            display: inline-block;
-            height: 2px;
-            width: 100%;
-            flex: 1;
-            background-color: $color-white;
-            margin-left: 4rem;
-
-
-        }
+    @include respond(mobile-lg) {
+      font-size: 4rem;
+      letter-spacing: 2px;
     }
 
-    &--secondary {
-        color: $color-primary;
-        font-size: 4rem;
-        letter-spacing: 2px;
-        margin-bottom: 2rem;
-
-        @include respond(mobile-lg) {
-            font-size: 3.2rem;
-            letter-spacing: 1px;
-        }
+    & span {
+      display: inline-block;
+      height: 2px;
+      width: 100%;
+      flex: 1;
+      background-color: $color-white;
+      margin-left: 4rem;
     }
+  }
 
-    &--tertiary {
-        font-family: $font-family-default;
-        letter-spacing: 8px;
-        font-size: 2.5rem;
-        font-weight: 300;
-        margin-bottom: 2rem;
+  &--secondary {
+    color: $color-primary;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
 
-        @include respond(mobile-lg) {
-            font-size: 2.5rem;
-            letter-spacing: 3px;
-        }
+    @include respond(mobile-lg) {
+      font-size: 3.2rem;
+      letter-spacing: 1px;
     }
+  }
+
+  &--tertiary {
+    font-family: $font-family-default;
+    letter-spacing: 8px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+
+    @include respond(mobile-lg) {
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+    }
+  }
+
+  &--h5 {
+    font-size: 1.8rem;
+    font-family: $font-family-default;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    text-transform: capitalize;
+  }
 }

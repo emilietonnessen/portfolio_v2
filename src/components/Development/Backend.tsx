@@ -1,24 +1,17 @@
-import progressMin from '../../assets/progress-min.png';
+import Paragraph, { StrongText } from '../UI/Paragraph';
 
 const Backend = () => {
-    return (
-        <div className="backend">
-                        <h4 className="headline headline--tertiary">backend</h4>
-                        <div className="backend__content">
-                            <div>
-                                <div className="progress-indicator">
-                                    <img className="progress-indicator__img" src={progressMin} alt="Progressbar"/>
-                                    <div className="progress-indicator__content">
-                                        <h6 className="progress-indicator__title">PHP</h6>
-                                        <p className="progress-indicator__progress">5%</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-    )
-}
+  return (
+    <div className="backend">
+      <h4 className="headline headline--tertiary">backend</h4>
+      <Paragraph>
+        I have minimal experience with backend. I've written one WordPress theme
+        in <StrongText>PHP</StrongText>. My plan is to become more confident and
+        experienced with frontend, then work on learning backend to one day
+        develop into fullstack.
+      </Paragraph>
+    </div>
+  );
+};
 
-export default Backend
+export default Backend;

@@ -1,43 +1,28 @@
-import { useContext } from 'react';
+import { useSelector } from 'react-redux';
 import { Element } from 'react-scroll';
-
 import ProjectCard from '../components/Project/ProjectCard';
-import ProjectsContext from '../context/ProjectsContext';
-import { Project } from '../constants/interfaces';
-
-
+import { selectProjects } from '../store/features/projectSlice';
+import { IProjects } from '../interfaces/IProjects';
 
 const Portfolio: React.FC = () => {
+  const projects = useSelector(selectProjects);
 
-    // Call context
-    const [projects, ] = useContext(ProjectsContext);
+  return (
+    <Element name="portfolio" className="portfolio" id="portfolio">
+      <h2 className="headline headline--primary">
+        Portfolio
+        <span></span>
+      </h2>
 
-    // Variables
-    let projectCard;
-
-    if (projects) {
-        projectCard = projects.map((project: Project) => (
-            <ProjectCard 
-                key={project.id}
-                data={project}
-                image={project.thumbnail}
-                title={project.name} />
-        ));
-    }
-
-    return (
-        <Element name="portfolio" className="portfolio" id="portfolio">
-            <h2 className="headline headline--primary">
-                Portfolio
-                <span></span>
-            </h2>
-  
-            <div className="projects">
-                {projectCard ? projectCard : "loading..."}
-            </div>
-
-        </Element>
-    );   
-}
+      <div className="projects">
+        {projects
+          ?.map((project: IProjects) => (
+            <ProjectCard key={project.id} data={project} />
+          ))
+          .reverse()}
+      </div>
+    </Element>
+  );
+};
 
 export default Portfolio;

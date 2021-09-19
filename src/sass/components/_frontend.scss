@@ -1,0 +1,12 @@
+.frontend {
+  &__list {
+  }
+
+  &__sub-list {
+    margin-left: 2.5rem;
+  }
+
+  &__project-link {
+    color: $color-primary-light;
+  }
+}
