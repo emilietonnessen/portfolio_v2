@@ -1,4 +1,4 @@
-import { Github, Linkedin } from '../../UI/Icons';
+import { Github, Linkedin } from 'components/UI/Icons';
 
 const SocialMedia: React.FC = () => (
   <div className="so-me">

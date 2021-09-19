@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IProjects } from '../../interfaces/IProjects';
-import projects from '../../server/projects';
-import { RootState } from '../store';
+import { IProjects } from 'interfaces/IProjects';
+import projects from 'server/projects';
+import { RootState } from 'store/store';
 
 interface IStateProjects {
   projects: IProjects[];

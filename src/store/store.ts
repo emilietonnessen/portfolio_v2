@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import courseSlice from './features/courseSlice';
-import projectSlice from './features/projectSlice';
+import courseSlice from 'store/features/courseSlice';
+import projectSlice from 'store/features/projectSlice';
 
 const store = configureStore({
   reducer: {

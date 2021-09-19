@@ -1,7 +1,7 @@
-import Courses from '../Courses/Courses';
-import Tools from './Tools';
-import Frontend from './Frontend';
-import Backend from './Backend';
+import Courses from 'components/Courses/Courses';
+import Tools from 'components/Development/Tools';
+import Frontend from 'components/Development/Frontend';
+import Backend from 'components/Development/Backend';
 
 const Development = () => {
   return (

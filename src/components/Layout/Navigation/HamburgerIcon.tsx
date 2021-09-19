@@ -1,4 +1,4 @@
-import { NavigationHamburgerIconProps } from '../../../constants/interfaces';
+import { NavigationHamburgerIconProps } from 'interfaces/interfaces';
 
 const HamburgerIcon: React.FC<NavigationHamburgerIconProps> = ({
   onClick,

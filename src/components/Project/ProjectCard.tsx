@@ -1,10 +1,10 @@
 import ReactFocusLock from 'react-focus-lock';
 import { useDispatch } from 'react-redux';
-import { white } from '../../constants/colors';
-import { IProjects } from '../../interfaces/IProjects';
-import { setFocus } from '../../store/features/projectSlice';
-import Button from '../UI/Button';
-import { ExternalLink, Github } from '../UI/Icons';
+import { white } from 'utils/colors';
+import { IProjects } from 'interfaces/IProjects';
+import { setFocus } from 'store/features/projectSlice';
+import Button from 'components/UI/Button';
+import { ExternalLink, Github } from 'components/UI/Icons';
 
 interface IProjectCard {
   data: IProjects;

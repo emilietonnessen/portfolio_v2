@@ -1,4 +1,4 @@
-import { IProjects } from '../interfaces/IProjects';
+import { IProjects } from 'interfaces/IProjects';
 
 const projects: IProjects[] = [
   {

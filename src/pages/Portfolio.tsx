@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import { Element } from 'react-scroll';
-import ProjectCard from '../components/Project/ProjectCard';
-import { selectProjects } from '../store/features/projectSlice';
-import { IProjects } from '../interfaces/IProjects';
+import ProjectCard from 'components/Project/ProjectCard';
+import { selectProjects } from 'store/features/projectSlice';
+import { IProjects } from 'interfaces/IProjects';
 
 const Portfolio: React.FC = () => {
   const projects = useSelector(selectProjects);

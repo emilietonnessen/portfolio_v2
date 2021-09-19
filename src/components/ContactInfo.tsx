@@ -1,4 +1,4 @@
-import { Envelope, Github, Linkedin } from './UI/Icons';
+import { Envelope, Github, Linkedin } from 'components/UI/Icons';
 
 const ContactInfo: React.FC = () => {
   return (

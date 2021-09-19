@@ -1,5 +1,5 @@
-import { primary } from '../../constants/colors';
-import { Cross } from './Icons';
+import { primary } from 'utils/colors';
+import { Cross } from 'components/UI/Icons';
 
 interface ModalProps {
   id: string;

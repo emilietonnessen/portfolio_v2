@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { ICourses } from '../../interfaces/ICourses';
-import courses from '../../server/courses';
-import { RootState } from '../store';
+import { ICourses } from 'interfaces/ICourses';
+import courses from 'server/courses';
+import { RootState } from 'store/store';
 
 interface IStateCourses {
   courses: ICourses[];

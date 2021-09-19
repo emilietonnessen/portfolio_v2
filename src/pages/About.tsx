@@ -1,6 +1,6 @@
 import { Element } from 'react-scroll';
-import AboutMe from '../components/AboutMe';
-import Development from '../components/Development/Development';
+import AboutMe from 'components/AboutMe';
+import Development from 'components/Development/Development';
 
 const About: React.FC = () => (
   <Element name="about" className="about">

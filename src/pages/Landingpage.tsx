@@ -1,5 +1,5 @@
 import { Element } from 'react-scroll';
-import Hero from '../components/Hero';
+import Hero from 'components/Hero';
 
 const Landingpage: React.FC = () => (
   <Element name="landingpage" className="landingpage">

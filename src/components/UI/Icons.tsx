@@ -1,4 +1,4 @@
-import * as interfaces from '../../constants/interfaces';
+import * as interfaces from 'interfaces/interfaces';
 
 export const Star: React.FC<interfaces.IconProps> = ({ color, classes }) => (
   <svg

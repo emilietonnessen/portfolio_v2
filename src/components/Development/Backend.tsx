@@ -1,4 +1,4 @@
-import Paragraph, { StrongText } from '../UI/Paragraph';
+import Paragraph, { StrongText } from 'components/UI/Paragraph';
 
 const Backend = () => {
   return (

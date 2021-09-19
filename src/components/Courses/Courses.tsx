@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import CourseCard from './CourseCard';
-import { selectCourses } from '../../store/features/courseSlice';
+import CourseCard from 'components/Courses/CourseCard';
+import { selectCourses } from 'store/features/courseSlice';
 
 const Courses = () => {
   const courses = useSelector(selectCourses);

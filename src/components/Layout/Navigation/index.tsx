@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Brand from './Brand';
-import HamburgerIcon from './HamburgerIcon';
-import Menu from './Menu';
-import SocialMedia from './SocialMedia';
+import Brand from 'components/Layout/Navigation/Brand';
+import HamburgerIcon from 'components/Layout/Navigation/HamburgerIcon';
+import Menu from 'components/Layout/Navigation/Menu';
+import SocialMedia from 'components/Layout/Navigation/SocialMedia';
 
 const Navigation: React.FC = () => {
   const [checked, setChecked] = useState<boolean>(false);

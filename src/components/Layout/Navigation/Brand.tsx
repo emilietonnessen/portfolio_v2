@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import logo from '../../../assets/logo.png';
+import logo from 'assets/images/logo.png';
 
 const Brand: React.FC = () => (
   <Link

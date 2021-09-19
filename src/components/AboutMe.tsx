@@ -1,13 +1,15 @@
 import React from 'react';
-import emilie2 from './../assets/emilie-2.jpg';
-import emilie3 from '../assets/emilie-3.jpg';
-import emilie4 from '../assets/emilie-4.jpg';
+import emilie2 from 'assets/images/emilie-2.jpg';
+import emilie3 from 'assets/images/emilie-3.jpg';
+import emilie4 from 'assets/images/emilie-4.jpg';
 import { ButtonLink } from './UI/Button';
-import Pdf from './../assets/resume.pdf';
-import { FileDownload } from './UI/Icons';
-import { white } from '../constants/colors';
-import { aboutMeDescription, aboutMeHeadline } from '../assets/content/aboutMe';
-import Paragraph from './UI/Paragraph';
+import { aboutMeDescription, aboutMeHeadline } from 'assets/content/aboutMe';
+import Pdf from 'assets/pdf/resume.pdf';
+
+import { FileDownload } from 'components/UI/Icons';
+import { white } from 'utils/colors';
+
+import Paragraph from 'components/UI/Paragraph';
 
 const AboutMe: React.FC = () => {
   return (
