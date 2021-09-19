@@ -18,6 +18,7 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className="navigation">
+      <ThemeToggler />
       <Brand />
 
       <HamburgerIcon

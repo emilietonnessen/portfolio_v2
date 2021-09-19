@@ -1,0 +1,33 @@
+.theme-toggle {
+  margin-left: 1.6rem;
+  background-image: linear-gradient(
+    150deg,
+    rgba($color-primary-light, 1),
+    rgba($color-primary-dark, 1)
+  );
+  width: 4.5rem;
+  height: 2rem;
+  border-radius: 1.7rem;
+  cursor: pointer;
+  position: relative;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__ball {
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: $color-dark-secondary;
+    border-radius: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 4px;
+    transition: all ease-out 0.4s;
+  }
+
+  &__checkbox:checked ~ &__ball {
+    right: 27px;
+  }
+}
