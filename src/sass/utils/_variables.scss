@@ -1,18 +1,21 @@
-// Color 
-$color-primary-light: lighten(#0073C2, 10);
-$color-primary: #0073C2;
-$color-primary-dark: darken(#0073C2, 15);
-$color-secondary: #191a20;
+// Color
+$color-primary-light: #0097fe;
+$color-primary: #0073c2;
+$color-primary-dark: #005b9a;
 
-$color-background: #393C45;
+$color-secondary: #191a20;
+$color-dark-secondary: #0e111e;
+$color-dark-secondary-light: #181d30;
+
+$color-background: #393c45;
 
 $color-grey-dark-1: #262931;
 $color-grey-dark-2: #212430;
 
 $color-grey-light-1: #868997;
-$color-grey-light-2: #7C86AB;
+$color-grey-light-2: #7c86ab;
 
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 $color-black: #000000;
 
 $color-success: rgb(56, 211, 9);
@@ -21,7 +24,6 @@ $color-error: rgb(211, 23, 9);
 
 $color-github: #6e5494;
 $color-linked: #0e76a8;
-
 
 // Font
 $font-size-default: 1.6rem;
