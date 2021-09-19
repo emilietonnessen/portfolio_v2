@@ -6,7 +6,7 @@ import { ButtonLink } from './UI/Button';
 import Pdf from './../assets/resume.pdf';
 import { FileDownload } from './UI/Icons';
 import { white } from '../constants/colors';
-import { aboutMeDescription, aboutMeHeadline } from '../content/aboutMe';
+import { aboutMeDescription, aboutMeHeadline } from '../assets/content/aboutMe';
 import Paragraph from './UI/Paragraph';
 
 const AboutMe: React.FC = () => {
