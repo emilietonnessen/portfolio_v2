@@ -1,0 +1,22 @@
+.frontend {
+  &__content-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include respond(mobile-lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__section {
+    margin-bottom: 4rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+    line-height: 2;
+  }
+}

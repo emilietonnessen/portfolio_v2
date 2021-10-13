@@ -1,147 +1,123 @@
 // Personal Information -------------------------------------
 .about-me {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 70rem max-content;
-    gap: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 70rem max-content;
+  gap: 5rem;
 
-    margin-bottom: 10rem;
+  margin-bottom: 10rem;
 
+  @include respond(tablet-port) {
+    grid-template-columns: 1fr 42.7rem;
+    gap: 3rem;
+  }
 
-    @include respond(tablet-port) {
-        grid-template-columns: 1fr 42.7rem;
-        gap: 3rem;
-    }
+  @include respond(mobile-lg) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, max-content);
+    gap: 6rem;
+  }
 
+  &__content {
     @include respond(mobile-lg) {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, max-content);
-        gap: 6rem;
+      grid-column: 1/2;
+      grid-row: 1/2;
     }
-
-    &__content {
-        @include respond(mobile-lg) {
-            grid-column: 1/2;
-            grid-row: 1/2;
-        }
-    }
+  }
 }
 
-
 .gallery {
-    @include respond(mobile-lg) {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
+  @include respond(mobile-lg) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
 }
 
 .educations {
-    grid-column: 1 / 2;
+  grid-column: 1 / 2;
 
-    @include respond(mobile-lg) {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
+  @include respond(mobile-lg) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
 }
 
 .education {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
+
+  @include respond(mobile-lg) {
+    margin-bottom: 3rem;
+  }
+
+  &__course-name {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
 
     @include respond(mobile-lg) {
-        margin-bottom: 3rem;
+      font-size: 1.8rem;
     }
+  }
 
-    &__course-name {
-        font-size: 2rem;
-        font-weight: 400;
-        margin-bottom: .5rem;
-        display: flex;
-        justify-content: space-between;
-
-        @include respond(mobile-lg) {
-            font-size: 1.8rem;
-        }
-    }
-
-    &__desc {
-        font-weight: 200;
-    }
+  &__desc {
+    font-weight: 200;
+  }
 }
 
 .work-experiences {
-    grid-column: 2 / 3;
+  grid-column: 2 / 3;
 
-    background-color: $color-grey-dark-2;
-    padding: 3rem;
+  background-color: $color-grey-dark-2;
+  padding: 3rem;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    @include respond(tablet-port) {
-        padding: 2rem;
-    }
+  @include respond(tablet-port) {
+    padding: 2rem;
+  }
 
-    @include respond(mobile-lg) {
-        grid-column: 1/2;
-        grid-row: 4/5;
-    }
+  @include respond(mobile-lg) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
 }
-
-
-
-
-
-
-
-
 
 // Development Information ---------------------------------
 .development {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(40rem, 1fr));
-    column-gap: 5rem;
-    //row-gap: 8rem;
+  column-gap: 5rem;
+  display: flex;
+  flex-direction: column;
 
-    @include respond(tablet-port) {
-        display: flex;
-        flex-direction: column;
-    }
+  & > *:not(:last-child) {
+    margin-bottom: 8rem;
+  }
 
-    & > *:not(:last-child) {
-        margin-bottom: 8rem;
-    }
-
-    &__headline {
-        grid-column: 1 / -1;
-    }
+  &__headline {
+    grid-column: 1 / -1;
+  }
 }
-
-
-
 
 .tools,
 .courses {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
-
-
 
 .certificates {
-    margin: 5rem 0;
+  margin: 5rem 0;
 }
-
-
 
 .frontend__content,
 .backend__content {
+  display: flex;
+  padding-right: 3rem;
+
+  & > * {
+    flex: 0 0 33%;
+
     display: flex;
-    padding-right: 3rem;
-    
-
-    & > * {
-        flex: 0 0 33%;
-
-        display: flex;
-        flex-direction: column;
-    }
+    flex-direction: column;
+  }
 }

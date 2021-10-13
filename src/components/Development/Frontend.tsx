@@ -1,91 +1,50 @@
-import progressBeginner from '../../assets/progress-beginner.png';
-import progressMedium from '../../assets/progress-medium.png';
-import progressAdvanced from '../../assets/progress-advanced.png';
-
 const Frontend = () => {
-    return (
-        <div className="frontend">
-                        <h4 className="headline headline--tertiary ">frontend</h4>
-                        <div className="frontend__content">
-                            <div className="html">
-
-
-                                <div className="progress-indicator">
-                                    <img className="progress-indicator__img" src={progressAdvanced} alt="Progress Indicator"/>
-                                    <div className="progress-indicator__content">
-                                        <h6 className="progress-indicator__title">HTML</h6>
-                                        <p className="progress-indicator__progress">75%</p>
-                                    </div>
-                                </div>
-
-                                <div className="progress-indicator">
-                                    <img className="progress-indicator__img" src={progressMedium} alt="Progress Indicator"/>
-                                    <div className="progress-indicator__content">
-                                        <h6 className="progress-indicator__title">Bootstrap</h6>
-                                        <p className="progress-indicator__progress">50%</p>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div className="css">
-
-
-                                <div className="progress-indicator">
-                                    <img className="progress-indicator__img" src={progressAdvanced} alt="Progress Indicator"/>
-                                    <div className="progress-indicator__content">
-                                        <h6 className="progress-indicator__title">CSS</h6>
-                                        <p className="progress-indicator__progress">75%</p>
-                                    </div>
-                                </div>
-
-                                <div className="progress-indicator">
-                                    <img className="progress-indicator__img" src={progressAdvanced} alt="Progress Indicator"/>
-                                    <div className="progress-indicator__content">
-                                        <h6 className="progress-indicator__title">Sass</h6>
-                                        <p className="progress-indicator__progress">75%</p>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                            <div className="javascript">
-
-
-
-                                <div className="progress-indicator">
-                                    <img className="progress-indicator__img" src={progressMedium} alt="Progressbar"/>
-                                    <div className="progress-indicator__content">
-                                        <h6 className="progress-indicator__title">JavaScript</h6>
-                                        <p className="progress-indicator__progress">50%</p>
-                                    </div>
-                                </div>
-
-                                <div className="progress-indicator">
-                                    <img className="progress-indicator__img" src={progressMedium} alt="Progressbar"/>
-                                    <div className="progress-indicator__content">
-                                        <h6 className="progress-indicator__title">React</h6>
-                                        <p className="progress-indicator__progress">50%</p>
-                                    </div>
-                                </div>
-
-                                <div className="progress-indicator">
-                                    <img className="progress-indicator__img" src={progressBeginner} alt="Progressbar"/>
-                                    <div className="progress-indicator__content">
-                                        <h6 className="progress-indicator__title">TypeScript</h6>
-                                        <p className="progress-indicator__progress">25%</p>
-                                    </div>
-                                </div>
-
-
-
-
-                            </div>
-                        </div>
-                        
-                    </div>
-    )
+  return (
+    <div className='frontend'>
+      <h4 className='headline headline--tertiary '>frontend</h4>
+      <div className='frontend__content-container'>
+        <div className='frontend__section'>
+          <h5 className='headline headline--h5'>HTML</h5>
+          <ul className='frontend__list'>
+            <li className='frontend__list-item'>
+              <i className='tools__icon fal fa-chevron-right'></i> Bootstrap
+            </li>
+          </ul>
+        </div>
+        <div className='frontend__section'>
+          <h5 className='headline headline--h5'>CSS</h5>
+          <ul className='frontend__list'>
+            <li className='frontend__list-item'>
+              <i className='tools__icon fal fa-chevron-right'></i> JSS
+            </li>
+            <li className='frontend__list-item'>
+              <i className='tools__icon fal fa-chevron-right'></i> Sass
+            </li>
+            <li className='frontend__list-item'>
+              <i className='tools__icon fal fa-chevron-right'></i> Material UI
+            </li>
+          </ul>
+        </div>
+        <div className='frontend__section'>
+          <h5 className='headline headline--h5'>JavaScript</h5>
+          <ul className='frontend__list'>
+            <li className='frontend__list-item'>
+              <i className='tools__icon fal fa-chevron-right'></i> React
+            </li>
+            <li className='frontend__list-item'>
+              <i className='tools__icon fal fa-chevron-right'></i> Next.js
+            </li>
+            <li className='frontend__list-item'>
+              <i className='tools__icon fal fa-chevron-right'></i> Redux
+            </li>
+            <li className='frontend__list-item'>
+              <i className='tools__icon fal fa-chevron-right'></i> TypeScript
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Frontend
