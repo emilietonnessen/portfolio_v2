@@ -1,12 +1,10 @@
+import Hero from 'features/Hero/Hero';
 import { Element } from 'react-scroll';
-import Hero from '../components/Hero';
 
-
-const Landingpage: React.FC = () => (
-    <Element name="landingpage" className="landingpage">
-        <Hero />
-    </Element>
+const LandingPage = () => (
+  <Element name="landingpage" className="landingpage">
+    <Hero />
+  </Element>
 );
 
-
-export default Landingpage;
+export default LandingPage;
