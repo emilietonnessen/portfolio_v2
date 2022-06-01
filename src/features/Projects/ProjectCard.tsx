@@ -1,6 +1,3 @@
-import SelectedProjectsContext from 'features/Projects/SelectedProjectContext';
-import { useContext } from 'react';
-
 interface ProjectProps {
   image: string;
   title: string;
@@ -8,10 +5,7 @@ interface ProjectProps {
 }
 
 const ProjectCard = ({ image, title, data }: ProjectProps) => {
-  const [, setSelectedProject] = useContext(SelectedProjectsContext);
-
   const changeSelectedProject = () => {
-    setSelectedProject(data);
     window.location.href = '#project';
   };
 

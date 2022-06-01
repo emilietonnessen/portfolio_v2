@@ -1,128 +1,120 @@
 .btn {
+  &,
+  &:link,
+  &:visited {
+    // Resets
+    border: 1px solid transparent;
+    outline: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    text-decoration: none;
 
-    &,
-    &:link,
-    &:visited {
-        // Resets
-        border: 1px solid transparent;
-        outline: none;
-        background-color: transparent;
-        -webkit-appearance: none;
-        border-radius: 0;
-        text-decoration: none;
+    // Flexbox
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 
-        // Flexbox
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        
-        // Common Button Styles
-        font-weight: 500;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        cursor: pointer;
-        box-shadow: $box-shadow-default;
-        transition: all .2s;
+    // Common Button Styles
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    cursor: pointer;
+    box-shadow: $box-shadow-default;
+    transition: all 0.2s;
+    font-family: $font-family-default;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: lighten($color-primary, 7);
+    transform: translateY(-0.5rem);
+    box-shadow: $box-shadow-hover;
+  }
+
+  &:focus-visible {
+    border: 1px solid $color-white;
+  }
+
+  &:active {
+    transform: translateY(0.5rem);
+    box-shadow: $box-shadow-active;
+  }
+
+  // SVG Icon
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+
+    @include respond(mobile) {
+      width: 1.6rem;
+      height: 1.6rem;
     }
-    
+  }
 
-    &:hover,
-    &:focus {
-        background-color: lighten($color-primary , 7);
-        transform: translateY(-.5rem);
-        box-shadow: $box-shadow-hover;
-    }
+  // Themes -----------------------------------------------------
+  &--primary,
+  &--primary:link,
+  &--primary:visited {
+    background-color: $color-primary;
+    color: $color-white;
 
-    &:focus-visible {
-        border: 1px solid $color-white;
+    &:hover {
+      background-color: lighten($color-primary, 10);
     }
 
     &:active {
-        transform: translateY(.5rem);
-        box-shadow: $box-shadow-active;
+      background-color: darken($color-primary, 10);
+    }
+  }
+
+  &--github,
+  &--github:link,
+  &--github:visited {
+    background-color: $color-github;
+    color: $color-white;
+
+    &:hover {
+      background-color: lighten($color-github, 10);
     }
 
-
-    // SVG Icon
-    &__icon {
-        width: 2rem;
-        height: 2rem;
-
-        @include respond (mobile) {
-            width: 1.6rem;
-            height: 1.6rem;
-        }
+    &:active {
+      background-color: darken($color-github, 10);
     }
+  }
 
+  // Sizes ------------------------------------------------------
+  &--cta,
+  &--cta:link,
+  &--cta:visited {
+    padding: 8px 20px;
+    font-size: 1.6rem;
+  }
 
-    // Themes -----------------------------------------------------
-    &--primary,
-    &--primary:link,
-    &--primary:visited {
-        background-color: $color-primary;
-        color: $color-white;
+  &--lg,
+  &--lg:link,
+  &--lg:visited {
+    padding: 1.2rem 2rem;
+    font-size: 2.5rem;
+  }
 
-        &:hover {
-            background-color: lighten($color-primary, 10);
-        }
+  &--md,
+  &--md:link,
+  &--md:visited {
+    padding: 1.2rem 2rem;
+    font-size: 1.6rem;
 
-        &:active {
-            background-color: darken($color-primary, 10);
-        }
+    @include respond(mobile) {
+      font-size: 1.4rem;
     }
+  }
 
-
-    &--github,
-    &--github:link,
-    &--github:visited {
-        background-color: $color-github;
-        color: $color-white;
-
-        &:hover {
-            background-color: lighten($color-github, 10);
-        }
-
-        &:active {
-            background-color: darken($color-github, 10);
-        }
-    }
-
-
-
-
-
-    // Sizes ------------------------------------------------------
-    &--cta,
-    &--cta:link,
-    &--cta:visited {
-        padding: 1.5rem 3rem;
-        font-size: 1.8rem;
-    }
-
-    &--lg,
-    &--lg:link,
-    &--lg:visited {
-        padding: 1.2rem 2rem;
-        font-size: 2.5rem;
-    }
-
-    &--md,
-    &--md:link,
-    &--md:visited{
-        padding: 1.2rem 2rem;
-        font-size: 1.8rem;
-
-        @include respond (mobile) {
-            font-size: 1.4rem;
-        }
-    }
-
-    &--sm,
-    &--sm:link,
-    &--sm:visited {
-        padding: .7rem 1.2rem;
-        font-size: 1.4rem;
-    }
+  &--sm,
+  &--sm:link,
+  &--sm:visited {
+    padding: 0.7rem 1.2rem;
+    font-size: 1.4rem;
+  }
 }

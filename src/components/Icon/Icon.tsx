@@ -259,7 +259,7 @@ export const User = ({ color, classes }: IconProps) => (
     focusable="false"
     data-prefix="fas"
     data-icon="user"
-    className={'svg-inline--fa fa-user fa-w-14' + classes}
+    className={`svg-inline--fa fa-user fa-w-14 ${classes}`}
     role="img"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 448 512"

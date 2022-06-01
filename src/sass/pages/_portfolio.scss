@@ -1,1 +1,27 @@
+.projects {
+  &__content {
+    padding-inline: 16px;
+  }
 
+  &__list {
+    overflow: auto;
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+  }
+
+  &__list-item {
+  }
+
+  &__image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}

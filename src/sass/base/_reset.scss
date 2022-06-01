@@ -1,22 +1,23 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
 }
 
 body {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
+  height: 100%;
 
-    @include respond(tablet-land) {
+  /*  @include respond(tablet-land) {
         font-size: 56.25%;
     }
 
     @include respond(mobile-lg) {
         font-size: 50%;
-    }
+    } */
 }

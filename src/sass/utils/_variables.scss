@@ -1,18 +1,21 @@
-// Color 
-$color-primary-light: lighten(#0073C2, 10);
-$color-primary: #0073C2;
-$color-primary-dark: darken(#0073C2, 15);
+// Colors
+$color-primary-light: lighten(#0073c2, 10);
+$color-primary: #0073c2;
+$color-primary-dark: darken(#0073c2, 15);
+
 $color-secondary: #191a20;
 
-$color-background: #393C45;
+$color-background-dark: #212430;
+$color-background: #393c45;
+$color-background-nav: #151825;
 
 $color-grey-dark-1: #262931;
 $color-grey-dark-2: #212430;
 
 $color-grey-light-1: #868997;
-$color-grey-light-2: #7C86AB;
+$color-grey-light-2: #7c86ab;
 
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 $color-black: #000000;
 
 $color-success: rgb(56, 211, 9);
@@ -20,29 +23,32 @@ $color-warning: rgb(211, 130, 9);
 $color-error: rgb(211, 23, 9);
 
 $color-github: #6e5494;
-$color-linked: #0e76a8;
+$color-github-light: lighten(#6e5494, 10);
+$color-github-dark: darken(#6e5494, 10);
 
+$color-linked: #0e76a8;
 
 // Font
 $font-size-default: 1.6rem;
+$font-size-12: 1.2rem;
 
 $font-family-default: 'montserrat', sans-serif;
 $font-family-heading: 'fieldwork hum', sans-serif;
 
 // Box Shadow
-$box-shadow-default: 0 .5rem 1.5rem rgba(#000, .15);
-$box-shadow-hover: 0 .5rem 3rem rgba(#000, .2);
-$box-shadow-active: 0 .5rem .5rem rgba(#000, .2);
+$box-shadow-default: 0 0.5rem 1.5rem rgba(#000, 0.15);
+$box-shadow-hover: 0 0.5rem 3rem rgba(#000, 0.2);
+$box-shadow-active: 0 0.5rem 0.5rem rgba(#000, 0.2);
 
 // Breakpoints
-$bp-desktop: 120em;            // 1920px
+$bp-desktop: 120em; // 1920px
 
-$bp-laptop-lg: 100em;          // 1600px
-$bp-laptop: 90.625em;          // 1450px
+$bp-laptop-lg: 100em; // 1600px
+$bp-laptop: 90.625em; // 1450px
 
-$bp-tablet-land: 71.875em;     // 1150px
-$bp-tablet-port: 62.5em;       // 1000px
+$bp-tablet-land: 71.875em; // 1150px
+$bp-tablet-port: 62.5em; // 1000px
 
-$bp-mobile-lg: 50em;           //  800px
-$bp-mobile: 37.5em;            //  600px
-$bp-mobile-sm: 25em;           //  400px
+$bp-mobile-lg: 50em; //  800px
+$bp-mobile: 37.5em; //  600px
+$bp-mobile-sm: 25em; //  400px

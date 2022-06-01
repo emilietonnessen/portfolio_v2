@@ -1,4 +1,4 @@
-const projects = [
+const projectsArray = [
   {
     id: 1,
     slug: 'risor-klatreklubb',
@@ -186,4 +186,4 @@ const projects = [
   },
 ];
 
-export default projects;
+export default projectsArray;

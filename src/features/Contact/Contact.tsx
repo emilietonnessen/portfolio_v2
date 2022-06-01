@@ -1,16 +1,12 @@
-import { Element } from 'react-scroll';
 import illustration from 'components/Icon/svgs/mail.svg';
 import ContactInfo from 'features/Contact/ContactInfo';
 
-const ContactPage = () => {
+const Contact = () => {
   return (
-    <Element name="contact" className="contact">
-      {/* Section Headline */}
+    <div className="contact">
       <h2 className="headline headline--primary">
         Contact Me <span></span>
       </h2>
-
-      {/* Contact Info */}
       <div className="contact__container">
         <ContactInfo />
         <img
@@ -19,8 +15,8 @@ const ContactPage = () => {
           className="contact__illustration"
         />
       </div>
-    </Element>
+    </div>
   );
 };
 
-export default ContactPage;
+export default Contact;
