@@ -7,6 +7,7 @@ const Projects = ({ scrollRef }: { scrollRef: RefObject<HTMLElement> }) => {
     <section
       ref={scrollRef}
       className="section section--dark-background"
+      className="section section--dark-background section--no-padding"
       id={ActiveSection.Portfolio}
     >
       <div className="projects__content">

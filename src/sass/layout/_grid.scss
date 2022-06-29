@@ -17,10 +17,14 @@
 
 .section {
   padding-block: 150px;
-  // padding-inline: 16px;
+  padding-inline: 16px;
 
   &--dark-background {
     background-color: $color-background-dark;
+  }
+
+  &--no-padding {
+    padding-inline: 0px;
   }
 }
 
