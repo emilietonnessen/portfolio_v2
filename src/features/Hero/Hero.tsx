@@ -2,7 +2,21 @@ import { ActiveSection } from 'App';
 import image from 'features/Hero/assets/web-developer.svg';
 import { RefObject } from 'react';
 
-const Hero = ({ scrollRef }: { scrollRef: RefObject<HTMLElement> }) => {
+interface HeroProps {
+  scrollRef: RefObject<HTMLElement>;
+  portfolioRef: RefObject<HTMLElement>;
+  setActiveSection: any;
+}
+
+const Hero = ({ scrollRef, portfolioRef, setActiveSection }: HeroProps) => {
+  const executeScroll = (ref: RefObject<HTMLElement>) => {
+    ref?.current?.scrollIntoView({
+      behavior: 'smooth',
+    });
+
+    setActiveSection(ref?.current?.id);
+  };
+
   return (
     <section id={ActiveSection.Hero} ref={scrollRef} className="section hero">
       <img
@@ -17,7 +31,12 @@ const Hero = ({ scrollRef }: { scrollRef: RefObject<HTMLElement> }) => {
           I implement visual and interactive elements to websites and
           applications. I make your design come alive!
         </p>
-        <button className="btn btn--primary btn--cta">View my portfolio</button>
+        <button
+          onClick={() => executeScroll(portfolioRef)}
+          className="btn btn--primary btn--cta"
+        >
+          View my portfolio
+        </button>
       </div>
     </section>
   );

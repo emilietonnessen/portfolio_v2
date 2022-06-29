@@ -3,6 +3,8 @@ import Hero from 'features/Hero/Hero';
 import Header from 'features/Layout/Header';
 import Contact from 'features/Contact/Contact';
 import Projects from 'features/Projects/Projects';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Project from 'features/Projects/Project';
 
 export enum ActiveSection {
   Hero = 'hero',
@@ -31,7 +33,11 @@ const App: React.FC = () => {
       />
 
       <main>
-        <Hero scrollRef={heroRef} />
+        <Hero
+          portfolioRef={portfolioRef}
+          setActiveSection={setActiveSection}
+          scrollRef={heroRef}
+        />
         <Projects scrollRef={portfolioRef} />
         <section className="section">Courses</section>
         <section className="section section--dark-background">
