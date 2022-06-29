@@ -30,6 +30,7 @@ const Projects = ({ scrollRef }: { scrollRef: RefObject<HTMLElement> }) => {
             </li>
           );
         })}
+      <ul className="projects__list hide-horizontal-scrollbar">
       </ul>
     </section>
   );

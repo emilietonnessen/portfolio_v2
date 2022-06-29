@@ -1,27 +1,31 @@
 // Width  ---------------------------
 ::-webkit-scrollbar {
-    width: .5rem;
-    height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
 }
-
-
 
 // Track ----------------------------
 ::-webkit-scrollbar-track {
-    background: $color-grey-dark-1;
+  background: $color-grey-dark-1;
 }
-
-
 
 // Handle ---------------------------
 ::-webkit-scrollbar-thumb {
-    background:  $color-grey-light-1;
-    border-radius: 5px;
+  background: $color-grey-light-1;
+  border-radius: 5px;
 }
-
-
 
 // Thumb ----------------------------
 ::-webkit-scrollbar-thumb:hover {
-    background:  $color-grey-light-2;
+  background: $color-grey-light-2;
+}
+
+// Hide horizontal scrollbar on the projects scroll
+.hide-horizontal-scrollbar::-webkit-scrollbar {
+  width: 0rem;
+  height: 0rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
