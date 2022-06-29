@@ -1,5 +1,5 @@
 import { ActiveSection } from 'App';
-import { Envelope, Portfolio, User } from 'components/Icon/Icon';
+import { Envelope, Home, Portfolio, User } from 'components/Icon/Icon';
 import { Dispatch, RefObject } from 'react';
 
 type HeaderProps = {
@@ -40,6 +40,7 @@ const Header = ({
               }`}
               onClick={() => executeScroll(heroRef)}
             >
+              <Home classes="header__icon" />
               Home
             </button>
           </li>
